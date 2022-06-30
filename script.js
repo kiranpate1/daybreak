@@ -202,22 +202,4 @@ weatherUpdate = (city, slang) => {
 weatherUpdate("toronto", "toronto");
 weatherUpdate("san fransisco", "sf");
 
-window.addEventListener("load", function(){
-		resize();
-});
-
-window.addEventListener("resize", function(){
-		resize();    
-});
-
-function resize() {
-  if ($(window).width() > 992) {
-    document.querySelector('.desktop').style.display = "block";
-    document.querySelector('.mobile').style.display = "none";
-  } else {
-    document.querySelector('.desktop').style.display = "none";
-    document.querySelector('.mobile').style.display = "block";
-  };
-
-}
 
