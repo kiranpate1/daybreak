@@ -212,7 +212,7 @@ window.addEventListener("resize", function(){
 
 function resize() {
 
-  if ($('body').width()  >= 816) {  
+  if ($(window).width() < 960) {
     console.log('run my code!');
   };
 
