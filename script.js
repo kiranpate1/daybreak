@@ -113,9 +113,23 @@ function resize() {
 					document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design";
 				}
 			}
+			function duplicateChildNodes (parentId){
+				var parent = document.querySelector(parentId);
+				NodeList.prototype.forEach = Array.prototype.forEach;
+				var children = parent.childNodes;
+				const node = document.createElement("div");
+				children.forEach(function(item){
+					var cln = item.cloneNode(true);
+					node.appendChild(cln);
+				});
+				document.getElementById('layout-' + number + '').appendChild(node);
+				node.classList.add("projects");
+				node.setAttribute("id", "duplicate");
+			};
+
+			duplicateChildNodes('.layout-' + number + ' .projects');
   } else {
-    document.querySelector('.desktop').style.display = "none";
-    document.querySelector('.mobile').style.display = "block";
+
   };
 
 }
@@ -123,21 +137,7 @@ function resize() {
 
 
 
-function duplicateChildNodes (parentId){
-  var parent = document.querySelector(parentId);
-  NodeList.prototype.forEach = Array.prototype.forEach;
-  var children = parent.childNodes;
-  const node = document.createElement("div");
-  children.forEach(function(item){
-    var cln = item.cloneNode(true);
-    node.appendChild(cln);
-  });
-  document.getElementById('layout-' + number + '').appendChild(node);
-  node.classList.add("projects");
-  node.setAttribute("id", "duplicate");
-};
 
-duplicateChildNodes('.layout-' + number + ' .projects');
 
 
 $('.project').on('mouseover',function(){for (let i = 0; i < document.querySelectorAll(".project").length; i++) {document.querySelectorAll(".project")[i].style.opacity = "0.2"}}).on('mouseout',function(){for (let i = 0; i < document.querySelectorAll(".project").length; i++) {document.querySelectorAll(".project")[i].style.opacity = "1"}})
