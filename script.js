@@ -37,92 +37,86 @@ window.addEventListener("resize", function(){
 		resize();    
 });
 
+  const projects1 = ["inspired-1", "inspired-2", "inspired-3", "inspired-4", "party-round-1", "party-round-2", "party-round-3", "wombo-dream-1", "wombo-dream-2", "wombo-dream-3"];
+  const projects2 = ["prologue-1", "prologue-2", "prologue-3", "prologue-4", "hyper-1", "hyper-2", "hyper-3", "party-grounds-1", "party-grounds-2", "spellbound-1", "spellbound-2"];
+  const projects3 = ["startup-supreme-1", "startup-supreme-2", "startup-supreme-3", "vc-puzzle-1", "vc-puzzle-2", "workweek-1", "workweek-2", "workweek-3", "workweek-4"];
+
+	function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+	}
+  var shuffle1 = shuffle(projects1);
+  var shuffle2 = shuffle(projects2);
+  var shuffle3 = shuffle(projects3);
+  const combinedshuffle = shuffle1.concat(shuffle2, shuffle3);;
+  console.log(combinedshuffle);
+  for (let i = 0; i < document.querySelectorAll('.layout-' + number + ' .project').length; i++) {
+    //const div = document.createElement("img");
+    //div.setAttribute("src", combinedshuffle[i]);
+    //document.querySelectorAll('.layout-' + number + ' .project')[i].appendChild(div);
+
+    document.querySelectorAll('.layout-' + number + ' .project')[i].classList.add(combinedshuffle[i].slice(0, -2), combinedshuffle[i]);
+    if (combinedshuffle[i].includes("inspired")) {
+    	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
+    	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Inspired";
+      document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Unifying brands and consumers.";
+      document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Strategy<br>Product";
+    } else if (combinedshuffle[i].includes("party-round")) {
+    	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
+    	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Party Round";
+      document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "An automated fundraising tool.";
+      document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design";
+    } else if (combinedshuffle[i].includes("wombo-dream")) {
+    	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
+    	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Wombo Dream";
+      document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "High-quality artwork created in seconds.";
+      document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Expertise<br>Expertise<br>Expertise";
+    } else if (combinedshuffle[i].includes("prologue")) {
+    	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
+    	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Prologue";
+      document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "The tech holding company of the 2020s.";
+      document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Naming<br>Strategy";
+    } else if (combinedshuffle[i].includes("hyper")) {
+    	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
+    	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Hyper";
+      document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Serving the next generation of founders.";
+      document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Web Design";
+    } else if (combinedshuffle[i].includes("party-grounds")) {
+    	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
+    	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Party Grounds";
+      document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Description for Party Grounds.";
+      document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Expertise<br>Expertise<br>Expertise";
+    } else if (combinedshuffle[i].includes("spellbound")) {
+    	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
+    	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Spellbound";
+      document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Interactive emails like magic.";
+      document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Web Design";
+    } else if (combinedshuffle[i].includes("startup-supreme")) {
+    	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2021";
+    	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Startup Supreme";
+      document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Wearing digital nostaglia.";
+      document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design";
+    } else if (combinedshuffle[i].includes("vc-puzzle")) {
+    	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
+    	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "VC Puzzle";
+      document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "A Shrug x Party Round collaboration.";
+      document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design<br>Packaging Design";
+    } else if (combinedshuffle[i].includes("workweek")) {
+    	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2021";
+    	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Workweek";
+      document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Putting creators first.";
+      document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design";
+    }
+  }
+
 function resize() {
   if ($(window).width() > 992) {
-      const projects1 = ["inspired-1", "inspired-2", "inspired-3", "inspired-4", "party-round-1", "party-round-2", "party-round-3", "wombo-dream-1", "wombo-dream-2", "wombo-dream-3"];
-			const projects2 = ["prologue-1", "prologue-2", "prologue-3", "prologue-4", "hyper-1", "hyper-2", "hyper-3", "party-grounds-1", "party-grounds-2", "spellbound-1", "spellbound-2"];
-			const projects3 = ["startup-supreme-1", "startup-supreme-2", "startup-supreme-3", "vc-puzzle-1", "vc-puzzle-2", "workweek-1", "workweek-2", "workweek-3", "workweek-4"];
-
-			function shuffle(a) {
-				for (let i = a.length - 1; i > 0; i--) {
-						const j = Math.floor(Math.random() * (i + 1));
-						[a[i], a[j]] = [a[j], a[i]];
-				}
-				return a;
-			}
-			var shuffle1 = shuffle(projects1);
-			var shuffle2 = shuffle(projects2);
-			var shuffle3 = shuffle(projects3);
-			const combinedshuffle = shuffle1.concat(shuffle2, shuffle3);;
-			console.log(combinedshuffle);
-			for (let i = 0; i < document.querySelectorAll('.layout-' + number + ' .project').length; i++) {
-				//const div = document.createElement("img");
-				//div.setAttribute("src", combinedshuffle[i]);
-				//document.querySelectorAll('.layout-' + number + ' .project')[i].appendChild(div);
-
-				document.querySelectorAll('.layout-' + number + ' .project')[i].classList.add(combinedshuffle[i].slice(0, -2), combinedshuffle[i]);
-				if (combinedshuffle[i].includes("inspired")) {
-					document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
-					document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Inspired";
-					document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Unifying brands and consumers.";
-					document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Strategy<br>Product";
-				} else if (combinedshuffle[i].includes("party-round")) {
-					document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
-					document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Party Round";
-					document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "An automated fundraising tool.";
-					document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design";
-				} else if (combinedshuffle[i].includes("wombo-dream")) {
-					document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
-					document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Wombo Dream";
-					document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "High-quality artwork created in seconds.";
-					document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Expertise<br>Expertise<br>Expertise";
-				} else if (combinedshuffle[i].includes("prologue")) {
-					document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
-					document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Prologue";
-					document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "The tech holding company of the 2020s.";
-					document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Naming<br>Strategy";
-				} else if (combinedshuffle[i].includes("hyper")) {
-					document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
-					document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Hyper";
-					document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Serving the next generation of founders.";
-					document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Web Design";
-				} else if (combinedshuffle[i].includes("party-grounds")) {
-					document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
-					document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Party Grounds";
-					document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Description for Party Grounds.";
-					document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Expertise<br>Expertise<br>Expertise";
-				} else if (combinedshuffle[i].includes("spellbound")) {
-					document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
-					document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Spellbound";
-					document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Interactive emails like magic.";
-					document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Web Design";
-				} else if (combinedshuffle[i].includes("startup-supreme")) {
-					document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2021";
-					document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Startup Supreme";
-					document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Wearing digital nostaglia.";
-					document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design";
-				} else if (combinedshuffle[i].includes("vc-puzzle")) {
-					document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
-					document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "VC Puzzle";
-					document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "A Shrug x Party Round collaboration.";
-					document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design<br>Packaging Design";
-				} else if (combinedshuffle[i].includes("workweek")) {
-					document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2021";
-					document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Workweek";
-					document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Putting creators first.";
-					document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design";
-				}
-			}
-
-
-			duplicateChildNodes('.layout-' + number + ' .projects .desktop');
+	duplicateChildNodes('.layout-' + number + ' .projects .desktop');
   } else {
-		
-		
-		
-
-			duplicateChildNodes('.layout-' + number + ' .projects .mobile');
-
+	duplicateChildNodes('.layout-' + number + ' .projects .mobile');
   };
 	function duplicateChildNodes (parentId){
 	var parent = document.querySelector(parentId);
@@ -136,8 +130,7 @@ function resize() {
 	document.getElementById('layout-' + number + '').appendChild(node);
 	node.classList.add("projects");
 	node.setAttribute("id", "duplicate");
-};
-
+  };
 }
 
 
