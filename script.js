@@ -112,13 +112,30 @@ window.addEventListener("resize", function(){
     }
   }
 
-function resize() {
-  if ($(window).width() > 992) {
-	duplicateChildNodes('.layout-' + number + ' .desktop');
-  } else {
-	duplicateChildNodes('.layout-' + number + ' .mobile');
-  };
-	function duplicateChildNodes (parentId){
+// function resize() {
+//   if ($(window).width() > 992) {
+// 	duplicateChildNodes('.layout-' + number + ' .desktop');
+//   } else {
+// 	duplicateChildNodes('.layout-' + number + ' .mobile');
+//   };
+// 	function duplicateChildNodes (parentId){
+// 	var parent = document.querySelector(parentId);
+// 	NodeList.prototype.forEach = Array.prototype.forEach;
+// 	var children = parent.childNodes;
+// 	const node = document.createElement("div");
+// 	children.forEach(function(item){
+// 		var cln = item.cloneNode(true);
+// 		node.appendChild(cln);
+// 	});
+// 	document.getElementById('layout-' + number + '').appendChild(node);
+// 	node.classList.add("projects");
+// 	node.setAttribute("id", "duplicate");
+//   };
+// }
+
+  duplicateChildNodes('.layout-' + number + ' .projects');
+
+  function duplicateChildNodes (parentId){
 	var parent = document.querySelector(parentId);
 	NodeList.prototype.forEach = Array.prototype.forEach;
 	var children = parent.childNodes;
@@ -131,9 +148,6 @@ function resize() {
 	node.classList.add("projects");
 	node.setAttribute("id", "duplicate");
   };
-}
-
-
 
 
 
