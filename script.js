@@ -133,7 +133,7 @@ window.addEventListener("resize", function(){
 //   };
 // }
 
-  duplicateChildNodes('.layout-' + number + ' .projects');
+  duplicateChildNodes('.layout-' + number + '');
 
   function duplicateChildNodes (parentId){
 	var parent = document.querySelector(parentId);
@@ -144,8 +144,8 @@ window.addEventListener("resize", function(){
 		var cln = item.cloneNode(true);
 		node.appendChild(cln);
 	});
-	document.getElementById('layout-' + number + '').appendChild(node);
-	node.classList.add("projects");
+	document.getElementById('landing-container').appendChild(node);
+	node.classList.add("landing-main");
 	node.setAttribute("id", "duplicate");
   };
 
