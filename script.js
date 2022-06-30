@@ -202,11 +202,19 @@ weatherUpdate = (city, slang) => {
 weatherUpdate("toronto", "toronto");
 weatherUpdate("san fransisco", "sf");
 
-$(window).on('load resize', function () {
+window.addEventListener("load", function(){
+		resize();
+});
+
+window.addEventListener("resize", function(){
+		resize();    
+});
+
+function resize() {
 
   if ($('body').width()  >= 816) {  
     console.log('run my code!');
   };
 
-});
+}
 
