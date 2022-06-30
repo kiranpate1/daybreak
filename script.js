@@ -124,10 +124,7 @@ function resize() {
 			duplicateChildNodes('.layout-' + number + ' .projects .mobile');
 
   };
-
-}
-
-function duplicateChildNodes (parentId){
+	function duplicateChildNodes (parentId){
 	var parent = document.querySelector(parentId);
 	NodeList.prototype.forEach = Array.prototype.forEach;
 	var children = parent.childNodes;
@@ -140,6 +137,10 @@ function duplicateChildNodes (parentId){
 	node.classList.add("projects");
 	node.setAttribute("id", "duplicate");
 };
+
+}
+
+
 
 
 
