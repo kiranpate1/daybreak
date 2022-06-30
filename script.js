@@ -29,13 +29,7 @@ window.onscroll = function (e) {
   }
 } 
 
-window.addEventListener("load", function(){
-		resize();
-});
 
-window.addEventListener("resize", function(){
-		resize();    
-});
 
   const projects1 = ["inspired-1", "inspired-2", "inspired-3", "inspired-4", "party-round-1", "party-round-2", "party-round-3", "wombo-dream-1", "wombo-dream-2", "wombo-dream-3"];
   const projects2 = ["prologue-1", "prologue-2", "prologue-3", "prologue-4", "hyper-1", "hyper-2", "hyper-3", "party-grounds-1", "party-grounds-2", "spellbound-1", "spellbound-2"];
@@ -133,22 +127,21 @@ window.addEventListener("resize", function(){
 //   };
 // }
 
-  duplicateChildNodes('.layout-' + number + '');
-
   function duplicateChildNodes (parentId){
-	var parent = document.querySelector(parentId);
-	NodeList.prototype.forEach = Array.prototype.forEach;
-	var children = parent.childNodes;
-	const node = document.createElement("div");
-	children.forEach(function(item){
-		var cln = item.cloneNode(true);
-		node.appendChild(cln);
-	});
-	document.getElementById('landing-container').appendChild(node);
-	node.classList.add("landing-main");
-	node.setAttribute("id", "duplicate");
+		var parent = document.querySelector(parentId);
+		NodeList.prototype.forEach = Array.prototype.forEach;
+		var children = parent.childNodes;
+		const node = document.createElement("div");
+		children.forEach(function(item){
+			var cln = item.cloneNode(true);
+			node.appendChild(cln);
+		});
+		document.getElementById('landing-container').appendChild(node);
+		node.classList.add("landing-main");
+		node.setAttribute("id", "duplicate");
   };
 
+  duplicateChildNodes('.layout-' + number + '');
 
 
 $('.project').on('mouseover',function(){for (let i = 0; i < document.querySelectorAll(".project").length; i++) {document.querySelectorAll(".project")[i].style.opacity = "0.2"}}).on('mouseout',function(){for (let i = 0; i < document.querySelectorAll(".project").length; i++) {document.querySelectorAll(".project")[i].style.opacity = "1"}})
