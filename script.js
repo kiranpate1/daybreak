@@ -114,9 +114,9 @@ window.addEventListener("resize", function(){
 
 function resize() {
   if ($(window).width() > 992) {
-	duplicateChildNodes('.layout-' + number + ' .projects .desktop');
+	duplicateChildNodes('.layout-' + number + ' .projects.desktop');
   } else {
-	duplicateChildNodes('.layout-' + number + ' .projects .mobile');
+	duplicateChildNodes('.layout-' + number + ' .projects.mobile');
   };
 	function duplicateChildNodes (parentId){
 	var parent = document.querySelector(parentId);
