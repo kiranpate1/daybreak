@@ -211,9 +211,12 @@ window.addEventListener("resize", function(){
 });
 
 function resize() {
-
-  if ($(window).width() < 960) {
-    console.log('run my code!');
+  if ($(window).width() > 992) {
+    document.querySelector('.desktop').style.display = "block";
+    document.querySelector('.mobile').style.display = "none";
+  } else {
+    document.querySelector('.desktop').style.display = "none";
+    document.querySelector('.mobile').style.display = "block";
   };
 
 }
