@@ -1,4 +1,4 @@
-<script>
+
 const number = Math.floor(Math.random()*document.querySelectorAll('.landing-main').length);
 $(document).ready(function(){
     $(this).scrollTop(5);
@@ -112,9 +112,7 @@ $('.workweek').on('mouseover',function(){for (let i = 0; i < document.querySelec
      console.log("top");
    }
 });
-</script>
 
-<script>
 var intervalId = window.setInterval(function(){
 	torontotime()
   SFtime()
@@ -163,4 +161,4 @@ weatherUpdate = (city, slang) => {
 
 weatherUpdate("toronto", "toronto");
 weatherUpdate("san fransisco", "sf");
-</script>
+
