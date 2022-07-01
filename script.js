@@ -128,20 +128,20 @@ window.onscroll = function (e) {
 // }
 
   function duplicateChildNodes (parentId){
-		var parent = document.querySelector(parentId);
-		NodeList.prototype.forEach = Array.prototype.forEach;
-		var children = parent.childNodes;
-		const node = document.createElement("div");
-		children.forEach(function(item){
-			var cln = item.cloneNode(true);
-			node.appendChild(cln);
-		});
-		document.getElementById('landing-container').appendChild(node);
-		node.classList.add("landing-main");
-		node.setAttribute("id", "duplicate");
+	var parent = document.querySelector(parentId);
+	NodeList.prototype.forEach = Array.prototype.forEach;
+	var children = parent.childNodes;
+	const node = document.createElement("div");
+	children.forEach(function(item){
+		var cln = item.cloneNode(true);
+		node.appendChild(cln);
+	});
+	document.getElementById('.layout-' + number + '.projects').appendChild(node);
+	node.classList.add("projects");
+	node.setAttribute("id", "duplicate");
   };
 
-  duplicateChildNodes('.layout-' + number + '');
+  duplicateChildNodes('.layout-' + number + '.projects');
 
 
 $('.project').on('mouseover',function(){for (let i = 0; i < document.querySelectorAll(".project").length; i++) {document.querySelectorAll(".project")[i].style.opacity = "0.2"}}).on('mouseout',function(){for (let i = 0; i < document.querySelectorAll(".project").length; i++) {document.querySelectorAll(".project")[i].style.opacity = "1"}})
