@@ -32,13 +32,13 @@ window.onscroll = function (e) {
   const projects2 = ["prologue-1", "prologue-2", "prologue-3", "prologue-4", "hyper-1", "hyper-2", "hyper-3", "party-grounds-1", "party-grounds-2", "spellbound-1", "spellbound-2"];
   const projects3 = ["startup-supreme-1", "startup-supreme-2", "startup-supreme-3", "vc-puzzle-1", "vc-puzzle-2", "workweek-1", "workweek-2", "workweek-3", "workweek-4"];
 
-	function shuffle(a) {
+  function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [a[i], a[j]] = [a[j], a[i]];
     }
     return a;
-	}
+  }
   var shuffle1 = shuffle(projects1);
   var shuffle2 = shuffle(projects2);
   var shuffle3 = shuffle(projects3);
@@ -49,7 +49,7 @@ window.onscroll = function (e) {
     //div.setAttribute("src", combinedshuffle[i]);
     //document.querySelectorAll('.layout-' + number + ' .project')[i].appendChild(div);
 
-    document.querySelectorAll('.layout-' + number + ' .project')[i].classList.add(combinedshuffle[i].slice(0, -2), combinedshuffle[i]);
+    document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.add(combinedshuffle[i].slice(0, -2), combinedshuffle[i]);
     if (combinedshuffle[i].includes("inspired")) {
     	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
     	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Inspired";
@@ -103,22 +103,22 @@ window.onscroll = function (e) {
     }
   }
 
-window.addEventListener("load", function(){
-	resize();
-});
+// window.addEventListener("load", function(){
+// 	resize();
+// });
 
-window.addEventListener("resize", function(){
-	resize();    
-});
+// window.addEventListener("resize", function(){
+// 	resize();    
+// });
 
-function resize() {
-  if ($(window).width() > 992) {
+// function resize() {
+//   if ($(window).width() > 992) {
 	
-  } else {
+//   } else {
 
-  };
+//   };
 
-}
+// }
 
 function duplicateChildNodes (parentId, screen){
   var parent = document.querySelector(parentId);
