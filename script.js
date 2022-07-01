@@ -118,7 +118,7 @@ function duplicateChildNodes (parentId){
   node.setAttribute("id", "duplicate");
 };
 
-duplicateChildNodes('.layout-' + number + ' .projects');
+duplicateChildNodes('.layout-' + number + ' .projects.desktop');
 
 
 $('.project').on('mouseover',function(){for (let i = 0; i < document.querySelectorAll(".project").length; i++) {document.querySelectorAll(".project")[i].style.opacity = "0.2"}}).on('mouseout',function(){for (let i = 0; i < document.querySelectorAll(".project").length; i++) {document.querySelectorAll(".project")[i].style.opacity = "1"}})
