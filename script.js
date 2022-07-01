@@ -59,7 +59,15 @@ window.onscroll = function (e) {
 
     document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.add(combinedshuffle[i].slice(0, -2), combinedshuffle[i]);
 	  
-  console.log(Math.random() * (4 - 1) + 1)
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+	console.log(getRandomInt(1, 4))
+	  console.log(getRandomInt(1, 4))
+	  
+	  
     if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains('inspired')) {
     	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
     	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Inspired";
