@@ -122,7 +122,7 @@ function duplicateChildNodes (parentId, screen){
   });
   document.getElementById('layout-' + number + '').appendChild(node);
   node.classList.add("projects", screen);
-  node.setAttribute("id", "duplicate");
+  node.setAttribute("id", "duplicate" + screen + "");
 };
 
 duplicateChildNodes('.layout-' + number + ' .projects.desktop', 'desktop');
