@@ -49,7 +49,7 @@ window.onscroll = function (e) {
     //div.setAttribute("src", combinedshuffle[i]);
     //document.querySelectorAll('.layout-' + number + ' .project')[i].appendChild(div);
 
-    document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.add(combinedshuffle[i].slice(0, -2), combinedshuffle[i]);
+    document.querySelectorAll('.layout-' + number + ' .projects.desktop .project')[i].classList.add(combinedshuffle[i].slice(0, -2), combinedshuffle[i]);
     if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains('inspired')) {
     	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
     	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Inspired";
