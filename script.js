@@ -44,6 +44,7 @@ window.onscroll = function (e) {
   var shuffle3 = shuffle(projects3);
   const combinedshuffle = shuffle1.concat(shuffle2, shuffle3);;
   console.log(combinedshuffle);
+console.log(document.querySelectorAll('.layout-' + number + ' .desktop .project'))
   for (let i = 0; i < document.querySelectorAll('.layout-' + number + ' .project').length; i++) {
     //const div = document.createElement("img");
     //div.setAttribute("src", combinedshuffle[i]);
