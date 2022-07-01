@@ -52,21 +52,21 @@ window.onscroll = function (e) {
   var shuffle3 = shuffle(projects3);
   const combinedshuffle = shuffle1.concat(shuffle2, shuffle3);;
   console.log(combinedshuffle);
+
+
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[0].classList.add.('inspired-' + getRandomInt(1, 4))
+
   for (let i = 0; i < document.querySelectorAll('.layout-' + number + ' .project').length; i++) {
     //const div = document.createElement("img");
     //div.setAttribute("src", combinedshuffle[i]);
     //document.querySelectorAll('.layout-' + number + ' .project')[i].appendChild(div);
 
-    document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.add(combinedshuffle[i].slice(0, -2), combinedshuffle[i]);
-	  
-  function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-	console.log(getRandomInt(1, 4))
-	  console.log(getRandomInt(1, 4))
-	  
+    document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.add(combinedshuffle[i].slice(0, -2), combinedshuffle[i]);	  
 	  
     if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains('inspired')) {
     	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
