@@ -1,4 +1,3 @@
-
 const number = Math.floor(Math.random()*document.querySelectorAll('.landing-main').length);
 $(document).ready(function(){
     $(this).scrollTop(5);
@@ -28,8 +27,6 @@ window.onscroll = function (e) {
 		document.querySelectorAll('.layout-' + number + ' .project')[i].style.display = "block";
   }
 } 
-
-
 
   const projects1 = ["inspired-1", "inspired-2", "inspired-3", "inspired-4", "party-round-1", "party-round-2", "party-round-3", "wombo-dream-1", "wombo-dream-2", "wombo-dream-3"];
   const projects2 = ["prologue-1", "prologue-2", "prologue-3", "prologue-4", "hyper-1", "hyper-2", "hyper-3", "party-grounds-1", "party-grounds-2", "spellbound-1", "spellbound-2"];
@@ -105,27 +102,6 @@ window.onscroll = function (e) {
       document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design";
     }
   }
-
-// function resize() {
-//   if ($(window).width() > 992) {
-// 	duplicateChildNodes('.layout-' + number + ' .desktop');
-//   } else {
-// 	duplicateChildNodes('.layout-' + number + ' .mobile');
-//   };
-// 	function duplicateChildNodes (parentId){
-// 	var parent = document.querySelector(parentId);
-// 	NodeList.prototype.forEach = Array.prototype.forEach;
-// 	var children = parent.childNodes;
-// 	const node = document.createElement("div");
-// 	children.forEach(function(item){
-// 		var cln = item.cloneNode(true);
-// 		node.appendChild(cln);
-// 	});
-// 	document.getElementById('layout-' + number + '').appendChild(node);
-// 	node.classList.add("projects");
-// 	node.setAttribute("id", "duplicate");
-//   };
-// }
 
 
 function duplicateChildNodes (parentId){
@@ -224,5 +200,3 @@ weatherUpdate = (city, slang) => {
 
 weatherUpdate("toronto", "toronto");
 weatherUpdate("san fransisco", "sf");
-
-
