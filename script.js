@@ -154,7 +154,7 @@ window.addEventListener("scroll", function(){
 		infinite();    
 });
 
-function resize() {
+function infinite() {
   if ($(window).width() > 992) {
 		if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
 		 var wHeight = $(window).height();
