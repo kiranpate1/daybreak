@@ -113,7 +113,7 @@ function duplicateChildNodes (parentId, screen){
     node.appendChild(cln);
   });
   document.getElementById('layout-' + number + '').appendChild(node);
-  node.classList.add("projects", "duplicate-" + screen);
+  node.classList.add("projects", screen);
   node.setAttribute("id", "duplicate");
 };
 
