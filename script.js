@@ -156,22 +156,25 @@ window.addEventListener("scroll", function(){
 
 function infinite() {
   if ($(window).width() > 992) {
+		infiniteScreen('desktop')
+  } else {
+		infiniteScreen('mobile')
+  };
+	function infiniteScreen(screen) {
 		if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
 		 var wHeight = $(window).height();
-		 var eOffset = $('.layout-' + number + ' .projects').offset().top;
-		 var eHeight = $('.layout-' + number + ' .projects').height();
+		 var eOffset = $('.layout-' + number + ' .projects.' + screen).offset().top;
+		 var eHeight = $('.layout-' + number + ' .projects.' + screen).height();
 		 $(window).scrollTop(eOffset - wHeight + eHeight); 
 		 console.log("bottom");
 		}
 
 		if(window.scrollY==0) {
-		 var eOffset = $('#duplicate-desktop').offset().top; 
+		 var eOffset = $('#duplicate-' + screen).offset().top; 
 		 $(window).scrollTop(eOffset - 126);
 		 console.log("top");
 		}
-  } else {
-		
-  };
+	}
 }
 
 //  $(window).scroll(function() {   
