@@ -122,7 +122,7 @@ function duplicateChildNodes (parentId, screen){
   });
   document.getElementById('layout-' + number + '').appendChild(node);
   node.classList.add("projects", screen);
-  node.setAttribute("id", "duplicate" + screen + "");
+  node.setAttribute("id", "duplicate-" + screen + "");
 };
 
 duplicateChildNodes('.layout-' + number + ' .projects.desktop', 'desktop');
@@ -144,21 +144,51 @@ $('.vc-puzzle').on('mouseover',function(){for (let i = 0; i < document.querySele
 $('.workweek').on('mouseover',function(){for (let i = 0; i < document.querySelectorAll('.workweek').length; i++) {document.querySelectorAll(".workweek")[i].style.opacity = "1"}})
 
 
- $(window).scroll(function() {   
-   if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-     var wHeight = $(window).height();
-     var eOffset = $('.layout-' + number + ' .projects').offset().top;
-     var eHeight = $('.layout-' + number + ' .projects').height();
-     $(window).scrollTop(eOffset - wHeight + eHeight); 
-     console.log("bottom");
-   }
-   
-	 if(window.scrollY==0) {
-     var eOffset = $('#duplicate').offset().top; 
-     $(window).scrollTop(eOffset - 126);
-     console.log("top");
-   }
+window.addEventListener("load", function(){
+		infinite();
 });
+window.addEventListener("resize", function(){
+		infinite();    
+});
+window.addEventListener("scroll", function(){
+		infinite();    
+});
+
+function resize() {
+  if ($(window).width() > 992) {
+		if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+		 var wHeight = $(window).height();
+		 var eOffset = $('.layout-' + number + ' .projects').offset().top;
+		 var eHeight = $('.layout-' + number + ' .projects').height();
+		 $(window).scrollTop(eOffset - wHeight + eHeight); 
+		 console.log("bottom");
+		}
+
+		if(window.scrollY==0) {
+		 var eOffset = $('#duplicate-desktop').offset().top; 
+		 $(window).scrollTop(eOffset - 126);
+		 console.log("top");
+		}
+  } else {
+		
+  };
+}
+
+//  $(window).scroll(function() {   
+//    if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+//      var wHeight = $(window).height();
+//      var eOffset = $('.layout-' + number + ' .projects').offset().top;
+//      var eHeight = $('.layout-' + number + ' .projects').height();
+//      $(window).scrollTop(eOffset - wHeight + eHeight); 
+//      console.log("bottom");
+//    }
+   
+// 	 if(window.scrollY==0) {
+//      var eOffset = $('#duplicate').offset().top; 
+//      $(window).scrollTop(eOffset - 126);
+//      console.log("top");
+//    }
+// });
 
 var intervalId = window.setInterval(function(){
 	torontotime()
