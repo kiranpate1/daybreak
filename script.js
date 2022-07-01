@@ -50,52 +50,52 @@ window.onscroll = function (e) {
     //document.querySelectorAll('.layout-' + number + ' .project')[i].appendChild(div);
 
     document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.add(combinedshuffle[i].slice(0, -2), combinedshuffle[i]);
-    if (combinedshuffle[i].includes("inspired")) {
+    if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains('inspired')) {
     	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
     	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Inspired";
       document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Unifying brands and consumers.";
       document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Strategy<br>Product";
-    } else if (combinedshuffle[i].includes("party-round")) {
+    } else if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("party-round")) {
     	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
     	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Party Round";
       document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "An automated fundraising tool.";
       document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design";
-    } else if (combinedshuffle[i].includes("wombo-dream")) {
+    } else if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("wombo-dream")) {
     	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
     	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Wombo Dream";
       document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "High-quality artwork created in seconds.";
       document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Expertise<br>Expertise<br>Expertise";
-    } else if (combinedshuffle[i].includes("prologue")) {
+    } else if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("prologue")) {
     	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
     	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Prologue";
       document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "The tech holding company of the 2020s.";
       document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Naming<br>Strategy";
-    } else if (combinedshuffle[i].includes("hyper")) {
+    } else if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("hyper")) {
     	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
     	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Hyper";
       document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Serving the next generation of founders.";
       document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Web Design";
-    } else if (combinedshuffle[i].includes("party-grounds")) {
+    } else if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("party-grounds")) {
     	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
     	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Party Grounds";
       document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Description for Party Grounds.";
       document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Expertise<br>Expertise<br>Expertise";
-    } else if (combinedshuffle[i].includes("spellbound")) {
+    } else if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("spellbound")) {
     	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
     	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Spellbound";
       document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Interactive emails like magic.";
       document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Web Design";
-    } else if (combinedshuffle[i].includes("startup-supreme")) {
+    } else if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("startup-supreme")) {
     	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2021";
     	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Startup Supreme";
       document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Wearing digital nostaglia.";
       document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design";
-    } else if (combinedshuffle[i].includes("vc-puzzle")) {
+    } else if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("vc-puzzle")) {
     	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
     	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "VC Puzzle";
       document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "A Shrug x Party Round collaboration.";
       document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design<br>Packaging Design";
-    } else if (combinedshuffle[i].includes("workweek")) {
+    } else if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("workweek")) {
     	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2021";
     	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Workweek";
       document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Putting creators first.";
