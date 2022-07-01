@@ -59,7 +59,7 @@ window.onscroll = function (e) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
-	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[0].classList.add.('inspired-' + getRandomInt(1, 4) ''?)
+	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[0].classList.add('inspired-' + getRandomInt(1, 4))
 
   for (let i = 0; i < document.querySelectorAll('.layout-' + number + ' .project').length; i++) {
     //const div = document.createElement("img");
