@@ -22,11 +22,11 @@ $(document).ready(function(){
       }
     }, shapeLoadTime);
 });
-// window.onscroll = function (e) {  
-// 	for (let i = 0; i < document.querySelectorAll('.layout-' + number + ' .project').length; i++) {
-// 		document.querySelectorAll('.layout-' + number + ' .project')[i].style.display = "block";
-//   }
-// } 
+window.onscroll = function (e) {  
+	for (let i = 0; i < document.querySelectorAll('.layout-' + number + ' .project').length; i++) {
+		document.querySelectorAll('.layout-' + number + ' .project')[i].style.display = "block";
+  }
+} 
 
   const projects1 = ["inspired-1", "inspired-2", "inspired-3", "inspired-4", "party-round-1", "party-round-2", "party-round-3", "wombo-dream-1", "wombo-dream-2", "wombo-dream-3"];
   const projects2 = ["prologue-1", "prologue-2", "prologue-3", "prologue-4", "hyper-1", "hyper-2", "hyper-3", "party-grounds-1", "party-grounds-2", "spellbound-1", "spellbound-2"];
