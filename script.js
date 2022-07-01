@@ -59,7 +59,16 @@ window.onscroll = function (e) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
-	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[0].classList.add('inspired-' + getRandomInt(1, 4))
+	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[0].classList.add('inspired', 'inspired-' + getRandomInt(1, 4))
+	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[1].classList.add('party-round', 'party-round-' + getRandomInt(1, 3))
+	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[2].classList.add('wombo-dream', 'wombo-dream-' + getRandomInt(1, 3))
+	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[3].classList.add('prologue', 'prologue-' + getRandomInt(1, 4))
+	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[4].classList.add('hyper', 'hyper-' + getRandomInt(1, 3))
+	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[5].classList.add('party-grounds', 'party-grounds-' + getRandomInt(1, 2))
+	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[6].classList.add('spellbound', 'spellbound-' + getRandomInt(1, 2))
+	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[7].classList.add('startup-supreme', 'startup-supreme-' + getRandomInt(1, 3))
+	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[8].classList.add('vc-puzzle', 'vc-puzzle-' + getRandomInt(1, 2))
+	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[9].classList.add('workweek', 'workweek-' + getRandomInt(1, 4))
 
   for (let i = 0; i < document.querySelectorAll('.layout-' + number + ' .project').length; i++) {
     //const div = document.createElement("img");
