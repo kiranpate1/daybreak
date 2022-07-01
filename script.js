@@ -70,13 +70,7 @@ window.onscroll = function (e) {
 	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[8].classList.add('vc-puzzle', 'vc-puzzle-' + getRandomInt(1, 2))
 	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[9].classList.add('workweek', 'workweek-' + getRandomInt(1, 4))
 
-	console.log(document.querySelectorAll('.inspired').length)
-	for (let i = 0; i < document.querySelectorAll('.inspired').length; i++) {
-		document.querySelectorAll('.inspired .project-hover .caption')[i].innerHTML = "2022";
-		document.querySelectorAll('.inspired .project-hover .label')[i].innerHTML = "Inspired";
-		document.querySelectorAll('.inspired .project-hover .project-hover-top .body-founders-small')[i].innerHTML = "Unifying brands and consumers.";
-		document.querySelectorAll('.inspired .project-hover .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Strategy<br>Product";
-	}
+
 
   for (let i = 0; i < document.querySelectorAll('.layout-' + number + ' .project').length; i++) {
     //const div = document.createElement("img");
@@ -138,6 +132,12 @@ window.onscroll = function (e) {
       document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design";
     }
   }
+	for (let i = 0; i < document.querySelectorAll('.inspired').length; i++) {
+		document.querySelectorAll('.inspired .project-hover .caption')[i].innerHTML = "2022";
+		document.querySelectorAll('.inspired .project-hover .label')[i].innerHTML = "Inspired";
+		document.querySelectorAll('.inspired .project-hover .project-hover-top .body-founders-small')[i].innerHTML = "Unifying brands and consumers.";
+		document.querySelectorAll('.inspired .project-hover .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Strategy<br>Product";
+	}
 
 function duplicateChildNodes (parentId, screen){
   var parent = document.querySelector(parentId);
