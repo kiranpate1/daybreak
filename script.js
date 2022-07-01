@@ -13,18 +13,26 @@ $(document).ready(function(){
     var shapeLoader = 75;
 
     setTimeout(function () {
-      for (let i = 0; i < document.querySelectorAll('.layout-' + number + ' .project').length; i++) {
-        document.querySelectorAll('.layout-' + number + ' .project').forEach((element, i) => {
-          setTimeout(function () {
-            element.style.display = "block" ?? "";
-          }, i * shapeLoader);
-        });
-      }
+			loadTiles('.project')
+			loadTiles('.project-mobile')
+	    function loadTiles(screen) {
+	      for (let i = 0; i < document.querySelectorAll('.layout-' + number + ' ' + screen).length; i++) {
+					document.querySelectorAll('.layout-' + number + ' ' + screen).forEach((element, i) => {
+						setTimeout(function () {
+							element.style.display = "block" ?? "";
+						}, i * shapeLoader);
+					});
+	      }
+	    }
+
     }, shapeLoadTime);
 });
 window.onscroll = function (e) {  
 	for (let i = 0; i < document.querySelectorAll('.layout-' + number + ' .project').length; i++) {
 		document.querySelectorAll('.layout-' + number + ' .project')[i].style.display = "block";
+  }
+	for (let i = 0; i < document.querySelectorAll('.layout-' + number + ' .project-mobile').length; i++) {
+		document.querySelectorAll('.layout-' + number + ' .project-mobile')[i].style.display = "block";
   }
 } 
 
