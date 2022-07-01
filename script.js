@@ -70,19 +70,27 @@ window.onscroll = function (e) {
 	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[8].classList.add('vc-puzzle', 'vc-puzzle-' + getRandomInt(1, 2))
 	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[9].classList.add('workweek', 'workweek-' + getRandomInt(1, 4))
 
+	for (let i = 0; i < document.querySelectorAll('.inspired').length; i++) {
+		document.querySelectorAll('.inspired .caption')[i].innerHTML = "2022";
+		document.querySelectorAll('.inspired .label')[i].innerHTML = "Inspired";
+		document.querySelectorAll('.inspired .project-hover-top .body-founders-small')[i].innerHTML = "Unifying brands and consumers.";
+		document.querySelectorAll('.inspired .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Strategy<br>Product";
+	}
+
   for (let i = 0; i < document.querySelectorAll('.layout-' + number + ' .project').length; i++) {
     //const div = document.createElement("img");
     //div.setAttribute("src", combinedshuffle[i]);
     //document.querySelectorAll('.layout-' + number + ' .project')[i].appendChild(div);
 
-    document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.add(combinedshuffle[i].slice(0, -2), combinedshuffle[i]);	  
+    document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.add(combinedshuffle[i].slice(0, -2), combinedshuffle[i]);
 	  
-    if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains('inspired')) {
-    	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
-    	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Inspired";
-      document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Unifying brands and consumers.";
-      document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Strategy<br>Product";
-    } else if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("party-round")) {
+//     if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains('inspired')) {
+//     	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
+//     	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Inspired";
+//       document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Unifying brands and consumers.";
+//       document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Strategy<br>Product";
+//     } else 
+		if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("party-round")) {
     	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
     	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Party Round";
       document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "An automated fundraising tool.";
