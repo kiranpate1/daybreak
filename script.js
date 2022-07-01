@@ -79,17 +79,6 @@ window.onscroll = function (e) {
 
     document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.add(combinedshuffle[i].slice(0, -2), combinedshuffle[i]);
 	  
-//     if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains('inspired')) {
-//     	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
-//     	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Inspired";
-//       document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Unifying brands and consumers.";
-//       document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Strategy<br>Product";
-//     } else 
-		if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("party-round")) {
-    	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
-    	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Party Round";
-      document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "An automated fundraising tool.";
-      document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design";
     } else if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("wombo-dream")) {
     	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
     	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Wombo Dream";
@@ -137,6 +126,12 @@ window.onscroll = function (e) {
 		document.querySelectorAll('.inspired .project-hover .label')[i].innerHTML = "Inspired";
 		document.querySelectorAll('.inspired .project-hover .project-hover-top .body-founders-small')[i].innerHTML = "Unifying brands and consumers.";
 		document.querySelectorAll('.inspired .project-hover .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Strategy<br>Product";
+	}
+	for (let i = 0; i < document.querySelectorAll('.party-round').length; i++) {
+		document.querySelectorAll('.inspired .project-hover .caption')[i].innerHTML = "2022";
+		document.querySelectorAll('.inspired .project-hover .label')[i].innerHTML = "Party Round";
+		document.querySelectorAll('.inspired .project-hover .project-hover-top .body-founders-small')[i].innerHTML = "An automated fundraising tool.";
+		document.querySelectorAll('.inspired .project-hover .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design";
 	}
 
 function duplicateChildNodes (parentId, screen){
