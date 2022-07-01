@@ -103,22 +103,38 @@ window.onscroll = function (e) {
     }
   }
 
+window.addEventListener("load", function(){
+	resize();
+});
 
-function duplicateChildNodes (parentId){
-  var parent = document.querySelector(parentId);
-  NodeList.prototype.forEach = Array.prototype.forEach;
-  var children = parent.childNodes;
-  const node = document.createElement("div");
-  children.forEach(function(item){
-    var cln = item.cloneNode(true);
-    node.appendChild(cln);
-  });
-  document.getElementById('layout-' + number + '').appendChild(node);
-  node.classList.add("projects");
-  node.setAttribute("id", "duplicate");
-};
+window.addEventListener("resize", function(){
+	resize();    
+});
 
-duplicateChildNodes('.layout-' + number + ' .projects.desktop');
+function resize() {
+  if ($(window).width() > 992) {
+	duplicateChildNodes('.layout-' + number + ' .projects.desktop');
+  } else {
+
+  };
+	function duplicateChildNodes (parentId){
+	  var parent = document.querySelector(parentId);
+	  NodeList.prototype.forEach = Array.prototype.forEach;
+	  var children = parent.childNodes;
+	  const node = document.createElement("div");
+	  children.forEach(function(item){
+	    var cln = item.cloneNode(true);
+	    node.appendChild(cln);
+	  });
+	  document.getElementById('layout-' + number + '').appendChild(node);
+	  node.classList.add("projects");
+	  node.setAttribute("id", "duplicate");
+	};
+}
+
+
+
+
 
 
 $('.project').on('mouseover',function(){for (let i = 0; i < document.querySelectorAll(".project").length; i++) {document.querySelectorAll(".project")[i].style.opacity = "0.2"}}).on('mouseout',function(){for (let i = 0; i < document.querySelectorAll(".project").length; i++) {document.querySelectorAll(".project")[i].style.opacity = "1"}})
