@@ -76,51 +76,10 @@ window.onscroll = function (e) {
     //const div = document.createElement("img");
     //div.setAttribute("src", combinedshuffle[i]);
     //document.querySelectorAll('.layout-' + number + ' .project')[i].appendChild(div);
-
+		
     document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.add(combinedshuffle[i].slice(0, -2), combinedshuffle[i]);
-	  
-    } else if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("wombo-dream")) {
-    	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
-    	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Wombo Dream";
-      document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "High-quality artwork created in seconds.";
-      document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Expertise<br>Expertise<br>Expertise";
-    } else if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("prologue")) {
-    	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
-    	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Prologue";
-      document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "The tech holding company of the 2020s.";
-      document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Naming<br>Strategy";
-    } else if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("hyper")) {
-    	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
-    	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Hyper";
-      document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Serving the next generation of founders.";
-      document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Web Design";
-    } else if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("party-grounds")) {
-    	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
-    	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Party Grounds";
-      document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Description for Party Grounds.";
-      document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Expertise<br>Expertise<br>Expertise";
-    } else if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("spellbound")) {
-    	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
-    	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Spellbound";
-      document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Interactive emails like magic.";
-      document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Web Design";
-    } else if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("startup-supreme")) {
-    	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2021";
-    	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Startup Supreme";
-      document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Wearing digital nostaglia.";
-      document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design";
-    } else if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("vc-puzzle")) {
-    	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2022";
-    	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "VC Puzzle";
-      document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "A Shrug x Party Round collaboration.";
-      document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design<br>Packaging Design";
-    } else if (document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.contains("workweek")) {
-    	document.querySelectorAll('.layout-' + number + ' .caption')[i].innerHTML = "2021";
-    	document.querySelectorAll('.layout-' + number + ' .label')[i].innerHTML = "Workweek";
-      document.querySelectorAll('.layout-' + number + ' .project-hover-top .body-founders-small')[i].innerHTML = "Putting creators first.";
-      document.querySelectorAll('.layout-' + number + ' .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design";
-    }
   }
+
 	for (let i = 0; i < document.querySelectorAll('.inspired').length; i++) {
 		document.querySelectorAll('.inspired .project-hover .caption')[i].innerHTML = "2022";
 		document.querySelectorAll('.inspired .project-hover .label')[i].innerHTML = "Inspired";
@@ -131,6 +90,54 @@ window.onscroll = function (e) {
 		document.querySelectorAll('.inspired .project-hover .caption')[i].innerHTML = "2022";
 		document.querySelectorAll('.inspired .project-hover .label')[i].innerHTML = "Party Round";
 		document.querySelectorAll('.inspired .project-hover .project-hover-top .body-founders-small')[i].innerHTML = "An automated fundraising tool.";
+		document.querySelectorAll('.inspired .project-hover .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design";
+	}
+	for (let i = 0; i < document.querySelectorAll('.wombo-dream').length; i++) {
+		document.querySelectorAll('.inspired .project-hover .caption')[i].innerHTML = "2022";
+		document.querySelectorAll('.inspired .project-hover .label')[i].innerHTML = "Wombo Dream";
+		document.querySelectorAll('.inspired .project-hover .project-hover-top .body-founders-small')[i].innerHTML = "High-quality artwork created in seconds.";
+		document.querySelectorAll('.inspired .project-hover .project-hover-bottom .body-founders-small')[i].innerHTML = "Expertise<br>Expertise<br>Expertise";
+	}
+	for (let i = 0; i < document.querySelectorAll('.prologue').length; i++) {
+		document.querySelectorAll('.inspired .project-hover .caption')[i].innerHTML = "2022";
+		document.querySelectorAll('.inspired .project-hover .label')[i].innerHTML = "Prologue";
+		document.querySelectorAll('.inspired .project-hover .project-hover-top .body-founders-small')[i].innerHTML = "The tech holding company of the 2020s.";
+		document.querySelectorAll('.inspired .project-hover .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Naming<br>Strategy";
+	}
+	for (let i = 0; i < document.querySelectorAll('.hyper').length; i++) {
+		document.querySelectorAll('.inspired .project-hover .caption')[i].innerHTML = "2022";
+		document.querySelectorAll('.inspired .project-hover .label')[i].innerHTML = "Hyper";
+		document.querySelectorAll('.inspired .project-hover .project-hover-top .body-founders-small')[i].innerHTML = "Serving the next generation of founders.";
+		document.querySelectorAll('.inspired .project-hover .project-hover-bottom .body-founders-small')[i].innerHTML = "Web Design";
+	}
+	for (let i = 0; i < document.querySelectorAll('.party-grounds').length; i++) {
+		document.querySelectorAll('.inspired .project-hover .caption')[i].innerHTML = "2022";
+		document.querySelectorAll('.inspired .project-hover .label')[i].innerHTML = "Party Grounds";
+		document.querySelectorAll('.inspired .project-hover .project-hover-top .body-founders-small')[i].innerHTML = "Description for Party Grounds.";
+		document.querySelectorAll('.inspired .project-hover .project-hover-bottom .body-founders-small')[i].innerHTML = "Expertise<br>Expertise<br>Expertise";
+	}
+	for (let i = 0; i < document.querySelectorAll('.spellbound').length; i++) {
+		document.querySelectorAll('.inspired .project-hover .caption')[i].innerHTML = "2022";
+		document.querySelectorAll('.inspired .project-hover .label')[i].innerHTML = "Spellbound";
+		document.querySelectorAll('.inspired .project-hover .project-hover-top .body-founders-small')[i].innerHTML = "Interactive emails like magic.";
+		document.querySelectorAll('.inspired .project-hover .project-hover-bottom .body-founders-small')[i].innerHTML = "Web Design";
+	}
+	for (let i = 0; i < document.querySelectorAll('.startup-supreme').length; i++) {
+		document.querySelectorAll('.inspired .project-hover .caption')[i].innerHTML = "2021";
+		document.querySelectorAll('.inspired .project-hover .label')[i].innerHTML = "Startup Supreme";
+		document.querySelectorAll('.inspired .project-hover .project-hover-top .body-founders-small')[i].innerHTML = "Wearing digital nostaglia.";
+		document.querySelectorAll('.inspired .project-hover .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design";
+	}
+	for (let i = 0; i < document.querySelectorAll('.vc-puzzle').length; i++) {
+		document.querySelectorAll('.inspired .project-hover .caption')[i].innerHTML = "2022";
+		document.querySelectorAll('.inspired .project-hover .label')[i].innerHTML = "VC Puzzle";
+		document.querySelectorAll('.inspired .project-hover .project-hover-top .body-founders-small')[i].innerHTML = "A Shrug x Party Round collaboration.";
+		document.querySelectorAll('.inspired .project-hover .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design<br>Packaging Design";
+	}
+	for (let i = 0; i < document.querySelectorAll('.workweek').length; i++) {
+		document.querySelectorAll('.inspired .project-hover .caption')[i].innerHTML = "2021";
+		document.querySelectorAll('.inspired .project-hover .label')[i].innerHTML = "Workweek";
+		document.querySelectorAll('.inspired .project-hover .project-hover-top .body-founders-small')[i].innerHTML = "Putting creators first.";
 		document.querySelectorAll('.inspired .project-hover .project-hover-bottom .body-founders-small')[i].innerHTML = "Brand Identity<br>Web Design";
 	}
 
