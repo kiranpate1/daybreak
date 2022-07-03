@@ -279,9 +279,9 @@ weatherUpdate("san fransisco", "sf");
 
 document.getElementById('menu-open').onclick = function openMobileNav() {
    document.getElementById('mobile-nav').style.maxHeight = '100vh'
-	$('body').addClass('noscroll');
+	document.body.style.overflow="hidden";
 }
 document.getElementById('menu-close').onclick = function closeMobileNav() {
    document.getElementById('mobile-nav').style.maxHeight = '0vh'
-	$('body').removeClass('noscroll');
+	document.body.style.overflow="scroll";
 }
