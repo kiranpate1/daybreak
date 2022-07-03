@@ -235,14 +235,18 @@ async function torontotime() {
   const response = await fetch(api_url);
   const data = await response.json();
   const { datetime } = data;
-	document.getElementById("toronto-time").innerHTML = datetime.substring(11,19);
+	for (let i = 0; i < document.querySelectorAll('.toronto-time').length; i++) {
+		document.querySelectorAll(".toronto-time")[i].innerHTML = datetime.substring(11,19);
+	}
 }
 async function SFtime() {
   const api_url = 'https://worldtimeapi.org/api/timezone/America/Los_Angeles';
   const response = await fetch(api_url);
   const data = await response.json();
   const { datetime } = data;
-	document.getElementById("sf-time").innerHTML = datetime.substring(11,19);
+	for (let i = 0; i < document.querySelectorAll('.sf-time').length; i++) {
+		document.querySelectorAll(".sf-time")[i].innerHTML = datetime.substring(11,19);
+	}
 }
 
 weatherUpdate = (city, slang) => {
@@ -271,3 +275,11 @@ weatherUpdate = (city, slang) => {
 
 weatherUpdate("toronto", "toronto");
 weatherUpdate("san fransisco", "sf");
+
+
+document.getElementById('menu-open').onclick = function openMobileNav() {
+   document.getElementById('mobile-nav').style.maxHeight = '100vh'
+}
+document.getElementById('menu-close').onclick = function closeMobileNav() {
+   document.getElementById('mobile-nav').style.maxHeight = '0vh'
+}
