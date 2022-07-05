@@ -269,6 +269,8 @@ weatherUpdate = (city, slang) => {
 				document.querySelectorAll('.city-' + slang + ' .haze')[i].style.display = 'block';
 			} else if (data.weather[0].main == 'Thunderstorm') {
 				document.querySelectorAll('.city-' + slang + ' .thunderstorm')[i].style.display = 'block';
+			} else if (data.weather[0].main == 'Mist') {
+				document.querySelectorAll('.city-' + slang + ' .mist')[i].style.display = 'block';
 			}
 		}
     console.log(data.name + ", " + `${Math.round(data.main.temp - 273.15)}°C` + ", " + data.weather[0].main + ", " + data.weather[0].description)
