@@ -256,19 +256,21 @@ weatherUpdate = (city, slang) => {
   	xhr.send();
   	xhr.onload = () => {
     var data = JSON.parse(xhr.response);
-    if (data.weather[0].main == 'Clouds') {
-    	document.querySelector('.city-' + slang + ' .clouds').style.display = 'block';
-    } else if (data.weather[0].main == 'Clear') {
-    	document.querySelector('.city-' + slang + ' .clear').style.display = 'block';
-    } else if (data.weather[0].main == 'Rain') {
-    	document.querySelector('.city-' + slang + ' .rain').style.display = 'block';
-    } else if (data.weather[0].main == 'Snow') {
-    	document.querySelector('.city-' + slang + ' .snow').style.display = 'block';
-    } else if (data.weather[0].main == 'Haze') {
-    	document.querySelector('.city-' + slang + ' .haze').style.display = 'block';
-    } else if (data.weather[0].main == 'Thunderstorm') {
-    	document.querySelector('.city-' + slang + ' .thunderstorm').style.display = 'block';
-    }
+		for (let i = 0; i < document.querySelectorAll('.city-' + slang + ' .clouds').length; i++) {
+			if (data.weather[0].main == 'Clouds') {
+				document.querySelectorAll('.city-' + slang + ' .clouds')[i].style.display = 'block';
+			} else if (data.weather[0].main == 'Clear') {
+				document.querySelectorAll('.city-' + slang + ' .clear')[i].style.display = 'block';
+			} else if (data.weather[0].main == 'Rain') {
+				document.querySelectorAll('.city-' + slang + ' .rain')[i].style.display = 'block';
+			} else if (data.weather[0].main == 'Snow') {
+				document.querySelectorAll('.city-' + slang + ' .snow')[i].style.display = 'block';
+			} else if (data.weather[0].main == 'Haze') {
+				document.querySelectorAll('.city-' + slang + ' .haze')[i].style.display = 'block';
+			} else if (data.weather[0].main == 'Thunderstorm') {
+				document.querySelectorAll('.city-' + slang + ' .thunderstorm')[i].style.display = 'block';
+			}
+		}
     console.log(data.name + ", " + `${Math.round(data.main.temp - 273.15)}°C` + ", " + data.weather[0].main + ", " + data.weather[0].description)
   };
 };
