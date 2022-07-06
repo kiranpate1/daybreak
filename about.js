@@ -7,3 +7,13 @@ $(document).ready(function(){
     document.querySelector('.nav-left .cities-info').style.display = 'none';
 	}, 200);
 });
+
+//setTimeout(function () {
+	for (let i = 0; i < document.querySelectorAll('.heading-massive span').length; i++) {
+		document.querySelectorAll('.heading-massive span').forEach((element, i) => {
+			setTimeout(function () {
+				element.style.display = "inline-block" ?? "";
+			}, i * 400);
+		});
+	}
+//}, document.querySelectorAll('.case-top-bar-content > div').length * elementDelay);
