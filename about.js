@@ -8,8 +8,8 @@ $(document).ready(function(){
 	}, 200);
 });
 
-//setTimeout(function () {
 var elementDelay = 100;
+setTimeout(function () {
 	for (let i = 0; i < document.querySelectorAll('.heading-massive span').length; i++) {
 		document.querySelectorAll('.heading-massive span').forEach((element, i) => {
 			setTimeout(function () {
@@ -17,4 +17,4 @@ var elementDelay = 100;
 			}, i * elementDelay);
 		});
 	}
-//}, document.querySelectorAll('.case-top-bar-content > div').length * elementDelay);
+}, 1000);
