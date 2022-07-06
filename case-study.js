@@ -86,7 +86,7 @@ document.addEventListener('scroll', function () {
 			for (let i = 0; i < document.querySelectorAll('.scroll-arrows svg path').length; i++) {
 				document.querySelectorAll('.scroll-arrows svg path').forEach((element, i) => {
 					setTimeout(function () {
-						element.style.opacity = "1" ?? "";
+						element.style.opacity = "1";
 					}, i * elementDelay);
 				});
 			}
