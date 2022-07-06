@@ -35,7 +35,7 @@
       }
     }, (document.querySelectorAll('.heading-1 span').length + document.querySelectorAll('.project-info-wrapper .project-info > div').length) * elementDelay);
     setTimeout(function () {
-      document.getElementsByClassName('case-container')[2].style.visibility = "visible";
+      document.querySelector('case-container')[2].style.visibility = "visible";
     }, (document.querySelectorAll('.heading-1 span').length + document.querySelectorAll('.project-info-wrapper .project-info > div').length + document.querySelectorAll('.project-image-intro > div').length) * elementDelay);
 
 
