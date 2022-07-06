@@ -21,6 +21,16 @@ $(function() {
     });
 });
 
+$('#home-link').click(function(e) {
+  e.preventDefault();
+  var linkUrl = $(this).attr('href');
+  setTimeout(function(url) { window.location = url; }, 1000, linkUrl);
+});
+
+$( "#home-link" ).click(function() {
+  document.querySelector('.nav-logo').style.width = '131px';
+});
+
 function isInViewport(el) {
     const rect = el.getBoundingClientRect();
     return (
