@@ -34,27 +34,22 @@ function isInViewport(el) {
 
 
 const box = document.querySelector('#after-carousel');
-const message = document.querySelector('#fdgdfg');
 
 document.addEventListener('scroll', function () {
-	console.log(isInViewport(box))
-    const messageText = isInViewport(box) ?
-        'The box is visible in the viewport' :
-        'The box is not visible in the viewport';
-
-    message.textContent = messageText;
-
+	if (isInViewport(box) === true) {
+		var elementDelay = 100;
+		setTimeout(function () {
+			for (let i = 0; i < document.querySelectorAll('.heading-massive span').length; i++) {
+				document.querySelectorAll('.heading-massive span').forEach((element, i) => {
+					setTimeout(function () {
+						element.style.display = "inline-block" ?? "";
+					}, i * elementDelay);
+				});
+			}
+		}, 500);
+	}
 }, {
     passive: true
 });
 
-var elementDelay = 100;
-setTimeout(function () {
-	for (let i = 0; i < document.querySelectorAll('.heading-massive span').length; i++) {
-		document.querySelectorAll('.heading-massive span').forEach((element, i) => {
-			setTimeout(function () {
-				element.style.display = "inline-block" ?? "";
-			}, i * elementDelay);
-		});
-	}
-}, 1000);
+
