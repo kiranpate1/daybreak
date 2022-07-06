@@ -4,6 +4,7 @@ async function torontotime() {
   const data = await response.json();
   const { datetime } = data;
 	console.log(datetime.substring(11,19))
+	console.log("HELL:OFPOpdasuigjwerihjgo")
 	for (let i = 0; i < document.querySelectorAll('.toronto-time').length; i++) {
 		document.querySelectorAll(".toronto-time")[i].innerHTML = datetime.substring(11,19);
 	}
