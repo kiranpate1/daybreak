@@ -9,11 +9,12 @@ $(document).ready(function(){
 });
 
 //setTimeout(function () {
+var elementDelay = 100;
 	for (let i = 0; i < document.querySelectorAll('.heading-massive span').length; i++) {
 		document.querySelectorAll('.heading-massive span').forEach((element, i) => {
 			setTimeout(function () {
 				element.style.display = "inline-block" ?? "";
-			}, i * 400);
+			}, i * elementDelay);
 		});
 	}
 //}, document.querySelectorAll('.case-top-bar-content > div').length * elementDelay);
