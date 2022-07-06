@@ -37,6 +37,7 @@ const box = document.querySelector('#after-carousel');
 const message = document.querySelector('#fdgdfg');
 
 document.addEventListener('scroll', function () {
+	console.log(isInViewport(box))
     const messageText = isInViewport(box) ?
         'The box is visible in the viewport' :
         'The box is not visible in the viewport';
