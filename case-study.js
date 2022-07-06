@@ -94,6 +94,7 @@ document.addEventListener('scroll', function () {
 	} else if (isInViewport(box) === false) {
 		document.querySelector('.next-up-info').style.opacity = "0";
 		document.querySelector('.next-up-overlay').style.opacity = "0";
+		$('.scroll-arrows svg path').style.opacity = "0.5";
 		for (let i = 0; i < document.querySelectorAll('.scroll-arrows svg path').length; i++) {
 			document.querySelectorAll('.scroll-arrows svg path').style.opacity = "0.5";
 		}
