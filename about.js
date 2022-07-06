@@ -21,35 +21,30 @@ $(function() {
     });
 });
 
-$(document).ready(function(){
-    $(window).scroll(function(){
-        if ($('#after-carousel').isOnScreen()) {
-            // The element is visible, do something
-            console.log("in viewport!");
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+function refreshIndicators() {
+    $('#after-carousel').each(function () {
+        if (isScrolledIntoView($('#' + $(this).attr('data-id')))) {
+            console.log("hi")
         } else {
-            // The element is NOT visible, do something else
+            console.log("fgsdfsd")
         }
     });
-});
+}
 
-$.fn.isOnScreen = function(){
-    
-    var win = $(window);
-    
-    var viewport = {
-        top : win.scrollTop(),
-        left : win.scrollLeft()
-    };
-    viewport.right = viewport.left + win.width();
-    viewport.bottom = viewport.top + win.height();
-    
-    var bounds = this.offset();
-    bounds.right = bounds.left + this.outerWidth();
-    bounds.bottom = bounds.top + this.outerHeight();
-    
-    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
-    
-};
+refreshIndicators();
+
+$(window).bind('scroll', refreshIndicators);
 
 var elementDelay = 100;
 setTimeout(function () {
