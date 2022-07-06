@@ -16,7 +16,7 @@ async function SFtime() {
 		document.querySelectorAll(".sf-time")[i].innerHTML = datetime.substring(11,19);
 	}
 }
-
+console.log(document.querySelectorAll('.toronto-time').length)
 weatherUpdate = (city, slang) => {
   const xhr = new XMLHttpRequest();
   xhr.open(
