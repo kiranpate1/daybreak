@@ -21,37 +21,35 @@ $(function() {
     });
 });
 
-// Get the an HTML element
-var element = document.querySelector('#afsdffsd');
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if ($('#after-carousel').isOnScreen()) {
+            // The element is visible, do something
+            console.log("in viewport!");
+        } else {
+            // The element is NOT visible, do something else
+        }
+    });
+});
 
-// Get its bounding client rectangle
-var bounding = element.getBoundingClientRect();
-
-function isInViewPort(element) {
-    // Get the bounding client rectangle position in the viewport
-    var bounding = element.getBoundingClientRect();
-
-    // Checking part. Here the code checks if it's *fully* visible
-    // Edit this part if you just want a partial visibility
-    if (
-        bounding.top >= 0 &&
-        bounding.left >= 0 &&
-        bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
-        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-    ) {
-        console.log('In the viewport! :)');
-        return true;
-    } else {
-        console.log('Not in the viewport. :(');
-        return false;
-    }
-}
-
-window.addEventListener('scroll', function (event) {
-    if (isInViewport(theElementToWatch)) {
-      // update the element display
-    }
-}, false);
+$.fn.isOnScreen = function(){
+    
+    var win = $(window);
+    
+    var viewport = {
+        top : win.scrollTop(),
+        left : win.scrollLeft()
+    };
+    viewport.right = viewport.left + win.width();
+    viewport.bottom = viewport.top + win.height();
+    
+    var bounds = this.offset();
+    bounds.right = bounds.left + this.outerWidth();
+    bounds.bottom = bounds.top + this.outerHeight();
+    
+    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+    
+};
 
 var elementDelay = 100;
 setTimeout(function () {
