@@ -81,7 +81,7 @@ document.addEventListener('scroll', function () {
 	if (isInViewport(box) === true) {
 		document.querySelector('.next-up-info').style.opacity = "1";
 		document.querySelector('.next-up-overlay').style.opacity = "1";
-		var elementDelay = 100;
+		var elementDelay = 250;
 		setTimeout(function () {
 			for (let i = 0; i < document.querySelectorAll('.scroll-arrows svg path').length; i++) {
 				document.querySelectorAll('.scroll-arrows svg path').forEach((element, i) => {
@@ -95,7 +95,7 @@ document.addEventListener('scroll', function () {
 		document.querySelector('.next-up-info').style.opacity = "0";
 		document.querySelector('.next-up-overlay').style.opacity = "0";
 		for (let i = 0; i < document.querySelectorAll('.scroll-arrows svg path').length; i++) {
-			document.querySelectorAll('.scroll-arrows svg path').style.opacity = "0";
+			document.querySelectorAll('.scroll-arrows svg path').style.opacity = "0.5";
 		}
 	}
 }, {
