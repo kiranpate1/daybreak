@@ -37,7 +37,7 @@ const box = document.querySelector('#after-carousel');
 
 document.addEventListener('scroll', function () {
 	if (isInViewport(box) === true) {
-		var elementDelay = 2000;
+		var elementDelay = 100;
 			for (let i = 0; i < document.querySelectorAll('.heading-massive span').length; i++) {
 				document.querySelectorAll('.heading-massive span').forEach((element, i) => {
 					setTimeout(function () {
