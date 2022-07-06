@@ -22,7 +22,7 @@ $(function() {
 });
 
 // Get the an HTML element
-var element = document.querySelector('#after-carousel');
+var element = document.querySelector('#afsdffsd');
 
 // Get its bounding client rectangle
 var bounding = element.getBoundingClientRect();
