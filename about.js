@@ -8,6 +8,19 @@ $(document).ready(function(){
 	}, 200);
 });
 
+$(function() {
+    var navBar = $(".nav-logo");
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 100) {
+            document.querySelector('.nav-logo').style.width = '131px';
+        } else if (scroll < 100) {
+            document.querySelector('.nav-logo').style.width = '55vw';
+        }
+    });
+});
+
 var elementDelay = 100;
 setTimeout(function () {
 	for (let i = 0; i < document.querySelectorAll('.heading-massive span').length; i++) {
