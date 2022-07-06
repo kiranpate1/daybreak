@@ -21,30 +21,31 @@ $(function() {
     });
 });
 
-function isScrolledIntoView(elem)
-{
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
+function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
 
-    var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + $(elem).height();
-
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    );
 }
 
-function refreshIndicators() {
-    $('#after-carousel').each(function () {
-        if (isScrolledIntoView($('#' + $(this).attr('data-id')))) {
-            console.log("hi")
-        } else {
-            console.log("fgsdfsd")
-        }
-    });
-}
 
-refreshIndicators();
+const box = document.querySelector('#after-carousel');
+const message = document.querySelector('#fdgdfg');
 
-$(window).bind('scroll', refreshIndicators);
+document.addEventListener('scroll', function () {
+    const messageText = isInViewport(box) ?
+        'The box is visible in the viewport' :
+        'The box is not visible in the viewport';
+
+    message.textContent = messageText;
+
+}, {
+    passive: true
+});
 
 var elementDelay = 100;
 setTimeout(function () {
