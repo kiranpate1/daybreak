@@ -46,7 +46,7 @@ document.addEventListener('scroll', function () {
 					}, i * elementDelay);
 				});
 			}
-		}, 500);
+		}, 100);
 	}
 }, {
     passive: true
