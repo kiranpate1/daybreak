@@ -6,6 +6,7 @@ async function torontotime() {
 	for (let i = 0; i < document.querySelectorAll('.toronto-time').length; i++) {
 		document.querySelectorAll(".toronto-time")[i].innerHTML = datetime.substring(11,19);
 	}
+	console.log(datetime.substring(11,19))
 }
 async function SFtime() {
   const api_url = 'https://worldtimeapi.org/api/timezone/America/Los_Angeles';
@@ -15,6 +16,7 @@ async function SFtime() {
 	for (let i = 0; i < document.querySelectorAll('.sf-time').length; i++) {
 		document.querySelectorAll(".sf-time")[i].innerHTML = datetime.substring(11,19);
 	}
+	console.log(datetime.substring(11,19))
 }
 
 weatherUpdate = (city, slang) => {
