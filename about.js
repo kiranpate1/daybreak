@@ -29,6 +29,10 @@ $('#home-link').click(function(e) {
 
 $( "#home-link" ).click(function() {
   document.querySelector('.nav-logo').style.width = '131px';
+	document.querySelector('.nav-left .daybreak-info').style.display = 'block';
+  document.querySelector('.nav-left .cities-info').style.display = 'block';
+	document.querySelector('.nav-left .daybreak-info').style.opacity = '0';
+  document.querySelector('.nav-left .cities-info').style.opacity = '0';
 });
 
 function isInViewport(el) {
