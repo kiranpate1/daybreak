@@ -3,20 +3,21 @@ async function torontotime() {
   const response = await fetch(api_url);
   const data = await response.json();
   const { datetime } = data;
+	console.log(datetime.substring(11,19))
 	for (let i = 0; i < document.querySelectorAll('.toronto-time').length; i++) {
 		document.querySelectorAll(".toronto-time")[i].innerHTML = datetime.substring(11,19);
 	}
-	console.log(datetime.substring(11,19))
 }
 async function SFtime() {
   const api_url = 'https://worldtimeapi.org/api/timezone/America/Los_Angeles';
   const response = await fetch(api_url);
   const data = await response.json();
   const { datetime } = data;
+	console.log(datetime.substring(11,19))
+	console.log(document.querySelectorAll('.sf-time').length)
 	for (let i = 0; i < document.querySelectorAll('.sf-time').length; i++) {
 		document.querySelectorAll(".sf-time")[i].innerHTML = datetime.substring(11,19);
 	}
-	console.log(datetime.substring(11,19))
 }
 
 weatherUpdate = (city, slang) => {
