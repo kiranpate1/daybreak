@@ -86,7 +86,7 @@ document.addEventListener('scroll', function () {
 			for (let i = 0; i < document.querySelectorAll('.scroll-arrows svg path').length; i++) {
 				document.querySelectorAll('.scroll-arrows svg path').forEach((element, i) => {
 					setTimeout(function () {
-						element.classList.add("fml");
+						element.style.opacity = "1";
 					}, i * elementDelay);
 				});
 			}
@@ -95,7 +95,7 @@ document.addEventListener('scroll', function () {
 		document.querySelector('.next-up-info').style.opacity = "0";
 		document.querySelector('.next-up-overlay').style.opacity = "0";
 		for (let i = 0; i < document.querySelectorAll('.scroll-arrows svg path').length; i++) {
-			document.querySelectorAll('.scroll-arrows svg path').classList.remove("fml");
+			document.querySelectorAll('.scroll-arrows svg path')[i].style.opacity = "0.5";
 		}
 	}
 }, {
