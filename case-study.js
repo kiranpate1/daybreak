@@ -82,15 +82,13 @@ document.addEventListener('scroll', function () {
 		document.querySelector('.next-up-info').style.opacity = "1";
 		document.querySelector('.next-up-overlay').style.opacity = "1";
 		var elementDelay = 250;
-		setTimeout(function () {
-			for (let i = 0; i < document.querySelectorAll('.scroll-arrows svg path').length; i++) {
-				document.querySelectorAll('.scroll-arrows svg path').forEach((element, i) => {
-					setTimeout(function () {
-						element.style.opacity = "1";
-					}, i * elementDelay);
-				});
-			}
-		}, 600);
+		for (let i = 0; i < document.querySelectorAll('.scroll-arrows svg path').length; i++) {
+			document.querySelectorAll('.scroll-arrows svg path').forEach((element, i) => {
+				setTimeout(function () {
+					element.style.opacity = "1";
+				}, i * elementDelay);
+			});
+		}
 	} else if (isInViewport(box) === false) {
 		document.querySelector('.next-up-info').style.opacity = "0";
 		document.querySelector('.next-up-overlay').style.opacity = "0";
