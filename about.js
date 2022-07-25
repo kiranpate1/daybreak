@@ -78,51 +78,82 @@ document.addEventListener('scroll', function () {
 
 const softwareEnter = document.querySelector('#software-enter');
 
-document.addEventListener('scroll', function () {
-	if (isInViewport(softwareEnter) === true) {
-		var elementDelay = 250;
-		for (let i = 0; i < document.querySelectorAll('.software-sequence').length; i++) {
-			document.querySelectorAll('.software-sequence').forEach((element, i) => {
-				setTimeout(function () {
-					element.style.display = "block";
-				}, i * elementDelay);
-			});
-		}
-		for (let i = 0; i < document.querySelectorAll('.brands-sequence').length; i++) {
-			document.querySelectorAll('.brands-sequence').forEach((element, i) => {
-				setTimeout(function () {
-					element.style.display = "none";
-				}, i * elementDelay);
-			});
-		}
-	}
-}, {
-    passive: true
-});
-
 const brandsEnter = document.querySelector('#brands-enter');
 
-document.addEventListener('scroll', function () {
-	if (isInViewport(brandsEnter) === true) {
-		var elementDelay = 250;
-		for (let i = 0; i < document.querySelectorAll('.software-sequence').length; i++) {
-			document.querySelectorAll('.software-sequence').forEach((element, i) => {
-				setTimeout(function () {
-					element.style.display = "none";
-				}, i * elementDelay);
-			});
+if ($(window).width() > 767) {
+	document.addEventListener('scroll', function () {
+		if (isInViewport(softwareEnter) === true) {
+			var elementDelay = 250;
+			for (let i = 0; i < document.querySelectorAll('.software-sequence').length; i++) {
+				document.querySelectorAll('.software-sequence').forEach((element, i) => {
+					setTimeout(function () {
+						element.style.display = "block";
+					}, i * elementDelay);
+				});
+			}
+			for (let i = 0; i < document.querySelectorAll('.brands-sequence').length; i++) {
+				document.querySelectorAll('.brands-sequence').forEach((element, i) => {
+					setTimeout(function () {
+						element.style.display = "none";
+					}, i * elementDelay);
+				});
+			}
 		}
-		for (let i = 0; i < document.querySelectorAll('.brands-sequence').length; i++) {
-			document.querySelectorAll('.brands-sequence').forEach((element, i) => {
-				setTimeout(function () {
-					element.style.display = "block";
-				}, i * elementDelay);
-			});
+	}, {
+			passive: true
+	});
+	
+	document.addEventListener('scroll', function () {
+		if (isInViewport(brandsEnter) === true) {
+			var elementDelay = 250;
+			for (let i = 0; i < document.querySelectorAll('.software-sequence').length; i++) {
+				document.querySelectorAll('.software-sequence').forEach((element, i) => {
+					setTimeout(function () {
+						element.style.display = "none";
+					}, i * elementDelay);
+				});
+			}
+			for (let i = 0; i < document.querySelectorAll('.brands-sequence').length; i++) {
+				document.querySelectorAll('.brands-sequence').forEach((element, i) => {
+					setTimeout(function () {
+						element.style.display = "block";
+					}, i * elementDelay);
+				});
+			}
 		}
-	}
-}, {
-    passive: true
-});
+	}, {
+			passive: true
+	});
+} else {
+	document.addEventListener('scroll', function () {
+		if (isInViewport(softwareEnter) === true) {
+			var elementDelay = 250;
+			for (let i = 0; i < document.querySelectorAll('.software-sequence').length; i++) {
+				document.querySelectorAll('.software-sequence').forEach((element, i) => {
+					setTimeout(function () {
+						element.style.display = "block";
+					}, i * elementDelay);
+				});
+			}
+		}
+	}, {
+			passive: true
+	});
+	
+	document.addEventListener('scroll', function () {
+		if (isInViewport(brandsEnter) === true) {
+			for (let i = 0; i < document.querySelectorAll('.brands-sequence').length; i++) {
+				document.querySelectorAll('.brands-sequence').forEach((element, i) => {
+					setTimeout(function () {
+						element.style.display = "block";
+					}, i * elementDelay);
+				});
+			}
+		}
+	}, {
+			passive: true
+	});
+};
 
 const workWithUsEnter = document.querySelector('#work-with-us-enter');
 
