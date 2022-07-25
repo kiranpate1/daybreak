@@ -67,3 +67,26 @@ document.addEventListener('scroll', function () {
 });
 
 
+
+const box2 = document.querySelector('#software-to-brands');
+
+document.addEventListener('scroll', function () {
+	if (isInViewport(box2) === true) {
+		var elementDelay = 250;
+		for (let i = 0; i < document.querySelectorAll('.software-to-brands > div').length; i++) {
+			document.querySelectorAll('.software-to-brands > div').forEach((element, i) => {
+				setTimeout(function () {
+					element.style.opacity = "1";
+				}, i * elementDelay);
+			});
+		}
+	} else if (isInViewport(box2) === false) {
+		for (let i = 0; i < document.querySelectorAll('.software-to-brands > div').length; i++) {
+			document.querySelectorAll('.software-to-brands > div')[i].style.opacity = "0";
+		}
+	}
+}, {
+    passive: true
+});
+
+
