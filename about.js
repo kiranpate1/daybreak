@@ -53,8 +53,8 @@ document.addEventListener('scroll', function () {
 	if (isInViewport(afterCarousel) === true) {
 		var elementDelay = 100;
 			setTimeout(function () {
-				for (let i = 0; i < document.querySelectorAll('.heading-massive span').length; i++) {
-					document.querySelectorAll('.heading-massive span').forEach((element, i) => {
+				for (let i = 0; i < document.querySelectorAll('.after-carousel .heading-massive span').length; i++) {
+					document.querySelectorAll('.after-carousel .heading-massive span').forEach((element, i) => {
 						setTimeout(function () {
 							element.style.display = "inline-block" ?? "";
 						}, i * elementDelay);
@@ -108,6 +108,23 @@ document.addEventListener('scroll', function () {
 			document.querySelectorAll('.brands-sequence').forEach((element, i) => {
 				setTimeout(function () {
 					element.style.display = "block";
+				}, i * elementDelay);
+			});
+		}
+	}
+}, {
+    passive: true
+});
+
+const workWithUsEnter = document.querySelector('#work-with-us-enter');
+
+document.addEventListener('scroll', function () {
+	if (isInViewport(brandsEnter) === true) {
+		var elementDelay = 250;
+		for (let i = 0; i < document.querySelectorAll('.next-up-info .heading-massive span').length; i++) {
+			document.querySelectorAll('.next-up-info .heading-massive span').forEach((element, i) => {
+				setTimeout(function () {
+					element.style.display = "inline-block" ?? "";
 				}, i * elementDelay);
 			});
 		}
