@@ -80,10 +80,6 @@ document.addEventListener('scroll', function () {
 				}, i * elementDelay);
 			});
 		}
-	} else if (isInViewport(box2) === false) {
-		for (let i = 0; i < document.querySelectorAll('.software-to-brands > div').length; i++) {
-			document.querySelectorAll('.software-to-brands > div')[i].style.opacity = "0";
-		}
 	}
 }, {
     passive: true
