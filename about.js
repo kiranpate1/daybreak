@@ -104,8 +104,7 @@ document.addEventListener('scroll', function () {
 				}, i * elementDelay);
 			});
 		}
-	}
-	else if (isInViewport(brandsEnter) === false) {
+	} else if (isInViewport(brandsEnter) === false) {
 		var elementDelay = 250;
 		for (let i = 0; i < document.querySelectorAll('.brands-sequence').length; i++) {
 			document.querySelectorAll('.brands-sequence').forEach((element, i) => {
