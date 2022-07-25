@@ -47,10 +47,10 @@ function isInViewport(el) {
 }
 
 
-const box = document.querySelector('#after-carousel');
+const afterCarousel = document.querySelector('#after-carousel');
 
 document.addEventListener('scroll', function () {
-	if (isInViewport(box) === true) {
+	if (isInViewport(afterCarousel) === true) {
 		var elementDelay = 100;
 			setTimeout(function () {
 				for (let i = 0; i < document.querySelectorAll('.heading-massive span').length; i++) {
@@ -68,15 +68,39 @@ document.addEventListener('scroll', function () {
 
 
 
-const box2 = document.querySelector('#software-to-brands');
+const softwareEnter = document.querySelector('#software-enter');
 
 document.addEventListener('scroll', function () {
-	if (isInViewport(box2) === true) {
+	if (isInViewport(softwareEnter) === true) {
 		var elementDelay = 250;
-		for (let i = 0; i < document.querySelectorAll('.software-to-brands > div').length; i++) {
-			document.querySelectorAll('.software-to-brands > div').forEach((element, i) => {
+		for (let i = 0; i < document.querySelectorAll('.software-sequence').length; i++) {
+			document.querySelectorAll('.software-sequence').forEach((element, i) => {
 				setTimeout(function () {
-					element.style.opacity = "1";
+					element.style.display = "block";
+				}, i * elementDelay);
+			});
+		}
+	}
+}, {
+    passive: true
+});
+
+const brandsEnter = document.querySelector('#brands-enter');
+
+document.addEventListener('scroll', function () {
+	if (isInViewport(brandsEnter) === true) {
+		var elementDelay = 250;
+		for (let i = 0; i < document.querySelectorAll('.software-sequence').length; i++) {
+			document.querySelectorAll('.software-sequence').forEach((element, i) => {
+				setTimeout(function () {
+					element.style.display = "none";
+				}, i * elementDelay);
+			});
+		}
+		for (let i = 0; i < document.querySelectorAll('.brands-sequence').length; i++) {
+			document.querySelectorAll('.brands-sequence').forEach((element, i) => {
+				setTimeout(function () {
+					element.style.display = "block";
 				}, i * elementDelay);
 			});
 		}
