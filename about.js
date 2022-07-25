@@ -142,6 +142,7 @@ if ($(window).width() > 767) {
 	
 	document.addEventListener('scroll', function () {
 		if (isInViewport(brandsEnter) === true) {
+			var elementDelay = 250;
 			for (let i = 0; i < document.querySelectorAll('.brands-sequence').length; i++) {
 				document.querySelectorAll('.brands-sequence').forEach((element, i) => {
 					setTimeout(function () {
