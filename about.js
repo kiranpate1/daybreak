@@ -107,17 +107,17 @@ document.addEventListener('scroll', function () {
 	}
 	else if (isInViewport(brandsEnter) === false) {
 		var elementDelay = 250;
-		for (let i = 0; i < document.querySelectorAll('.software-sequence').length; i++) {
-			document.querySelectorAll('.software-sequence').forEach((element, i) => {
-				setTimeout(function () {
-					element.style.display = "block";
-				}, i * elementDelay);
-			});
-		}
 		for (let i = 0; i < document.querySelectorAll('.brands-sequence').length; i++) {
 			document.querySelectorAll('.brands-sequence').forEach((element, i) => {
 				setTimeout(function () {
 					element.style.display = "none";
+				}, i * elementDelay);
+			});
+		}
+		for (let i = 0; i < document.querySelectorAll('.software-sequence').length; i++) {
+			document.querySelectorAll('.software-sequence').forEach((element, i) => {
+				setTimeout(function () {
+					element.style.display = "block";
 				}, i * elementDelay);
 			});
 		}
