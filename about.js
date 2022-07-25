@@ -119,7 +119,7 @@ document.addEventListener('scroll', function () {
 const workWithUsEnter = document.querySelector('#work-with-us-enter');
 
 document.addEventListener('scroll', function () {
-	if (isInViewport(brandsEnter) === true) {
+	if (isInViewport(workWithUsEnter) === true) {
 		var elementDelay = 250;
 		for (let i = 0; i < document.querySelectorAll('.next-up-info .heading-massive span').length; i++) {
 			document.querySelectorAll('.next-up-info .heading-massive span').forEach((element, i) => {
