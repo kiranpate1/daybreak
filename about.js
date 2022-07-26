@@ -74,22 +74,7 @@ document.addEventListener('scroll', function () {
     passive: true
 });
 
-const workWithUsEnter = document.querySelector('#work-with-us-enter');
 
-document.addEventListener('scroll', function () {
-	if (isInViewport(workWithUsEnter) === true) {
-		var elementDelay = 250;
-		for (let i = 0; i < document.querySelectorAll('.next-up-info .heading-massive span').length; i++) {
-			document.querySelectorAll('.next-up-info .heading-massive span').forEach((element, i) => {
-				setTimeout(function () {
-					element.style.display = "inline-block" ?? "";
-				}, i * elementDelay);
-			});
-		}
-	}
-}, {
-    passive: true
-});
 
 const softwareEnter = document.querySelector('#software-enter');
 
@@ -171,4 +156,19 @@ if ($(window).width() > 767) {
 	});
 };
 
+const workWithUsEnter = document.querySelector('#work-with-us-enter');
 
+document.addEventListener('scroll', function () {
+	if (isInViewport(workWithUsEnter) === true) {
+		var elementDelay = 250;
+		for (let i = 0; i < document.querySelectorAll('.work-with-us .heading-massive span').length; i++) {
+			document.querySelectorAll('.work-with-us .heading-massive span').forEach((element, i) => {
+				setTimeout(function () {
+					element.style.display = "inline-block" ?? "";
+				}, i * elementDelay);
+			});
+		}
+	}
+}, {
+    passive: true
+});
