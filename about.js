@@ -29,13 +29,13 @@ $(function() {
     });
 });
 
-$('#home-link').click(function(e) {
+$('#home-link, #contact-link').click(function(e) {
   e.preventDefault();
   var linkUrl = $(this).attr('href');
   setTimeout(function(url) { window.location = url; }, 1000, linkUrl);
 });
 
-$( "#home-link" ).click(function() {
+$( "#home-link, #contact-link" ).click(function() {
   document.querySelector('.nav-logo').style.width = '131px';
 	document.querySelector('.nav-left .daybreak-info').style.display = 'block';
   document.querySelector('.nav-left .cities-info').style.display = 'block';
