@@ -31,7 +31,7 @@
 .heading-1 span {
 	display: none;
 }
-.case-top-bar-content > div, .next-up-overlay, .next-up-info div {
+.case-top-bar-content > div, .next-up-overlay, .next-up-info > div {
 	opacity: 0;
 }
 .scroll-arrows svg path {
