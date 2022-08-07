@@ -96,8 +96,10 @@ document.addEventListener('scroll', function () {
 			});
 		}
 	} else if (isInViewport(box) === false) {
-		document.querySelector('.next-up-info div').style.opacity = "0";
 		document.querySelector('.next-up-overlay').style.opacity = "0";
+		for (let i = 0; i < document.querySelectorAll('.next-up-info > div').length; i++) {
+			document.querySelectorAll('.next-up-info > div')[i].style.opacity = "0";
+		}
 		for (let i = 0; i < document.querySelectorAll('.scroll-arrows svg path').length; i++) {
 			document.querySelectorAll('.scroll-arrows svg path')[i].style.opacity = "0.5";
 		}
