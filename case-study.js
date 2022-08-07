@@ -79,9 +79,15 @@ const box = document.querySelector('.next-up-info');
 
 document.addEventListener('scroll', function () {
 	if (isInViewport(box) === true) {
-		document.querySelector('.next-up-info').style.opacity = "1";
 		document.querySelector('.next-up-overlay').style.opacity = "1";
 		var elementDelay = 250;
+		for (let i = 0; i < document.querySelectorAll('.next-up-info div').length; i++) {
+			document.querySelectorAll('.next-up-info div').forEach((element, i) => {
+			  setTimeout(function () {
+			    element.style.opacity = "1" ?? "";
+			  }, i * elementDelay);
+			});
+		}
 		for (let i = 0; i < document.querySelectorAll('.scroll-arrows svg path').length; i++) {
 			document.querySelectorAll('.scroll-arrows svg path').forEach((element, i) => {
 				setTimeout(function () {
@@ -90,7 +96,7 @@ document.addEventListener('scroll', function () {
 			});
 		}
 	} else if (isInViewport(box) === false) {
-		document.querySelector('.next-up-info').style.opacity = "0";
+		document.querySelector('.next-up-info div').style.opacity = "0";
 		document.querySelector('.next-up-overlay').style.opacity = "0";
 		for (let i = 0; i < document.querySelectorAll('.scroll-arrows svg path').length; i++) {
 			document.querySelectorAll('.scroll-arrows svg path')[i].style.opacity = "0.5";
