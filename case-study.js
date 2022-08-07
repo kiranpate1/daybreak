@@ -81,8 +81,8 @@ document.addEventListener('scroll', function () {
 	if (isInViewport(box) === true) {
 		document.querySelector('.next-up-overlay').style.opacity = "1";
 		var elementDelay = 250;
-		for (let i = 0; i < document.querySelectorAll('.next-up-info div').length; i++) {
-			document.querySelectorAll('.next-up-info div').forEach((element, i) => {
+		for (let i = 0; i < document.querySelectorAll('.next-up-info > div').length; i++) {
+			document.querySelectorAll('.next-up-info > div').forEach((element, i) => {
 			  setTimeout(function () {
 			    element.style.opacity = "1" ?? "";
 			  }, i * elementDelay);
