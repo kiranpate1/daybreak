@@ -75,7 +75,7 @@ function isInViewport(el) {
     );
 }
 
-const box = document.querySelector('.next-up-info');
+const box = document.querySelector('#next-up-show');
 
 document.addEventListener('scroll', function () {
 	if (isInViewport(box) === true) {
