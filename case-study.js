@@ -99,3 +99,11 @@ document.addEventListener('scroll', function () {
 }, {
     passive: true
 });
+
+$( ".close-casestudy" ).mouseover(function() {
+  document.querySelector(".back-icon").style.display = "block";
+});
+
+$( ".close-casestudy" ).mouseout(function() {
+  document.querySelector(".back-icon").style.display = "none";
+});
