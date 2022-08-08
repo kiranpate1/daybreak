@@ -83,8 +83,8 @@ window.onscroll = function (e) {
     };
 
   }
-	document.querySelectorAll('.layout-' + number + ' .desktop .project').forEach(item => item.addEventListener ('mouseenter', function () {
-					console.log(event.target.getAttribute('href'))
+	document.querySelectorAll('.layout-' + number + ' .desktop .project').forEach(item => item.addEventListener ('hover', function () {
+					console.log(event.target.classList)
 			}
 	))
 
