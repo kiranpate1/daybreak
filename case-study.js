@@ -56,6 +56,15 @@ if ($(window).width() > 992) {
         });
       }
     }, document.querySelectorAll('.case-top-bar-content > div').length * elementDelay);
+    setTimeout(function () {
+      for (let i = 0; i < document.querySelectorAll('.project-image-intro > div').length; i++) {
+        document.querySelectorAll('.project-image-intro > div').forEach((element, i) => {
+          setTimeout(function () {
+            element.style.visibility = "visible" ?? "";
+          }, i * elementDelay);
+        });
+      }
+    }, (document.querySelectorAll('.project-info-wrapper > div').length + document.querySelectorAll('.case-top-bar-content > div').length) * elementDelay);
 };
 		
 window.onscroll = function() {myFunction()};
