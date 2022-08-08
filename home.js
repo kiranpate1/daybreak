@@ -41,7 +41,7 @@ window.onscroll = function (e) {
   const projects3 = ["notes-about-people-1", "notes-about-people-2", "party-grounds-1", "party-grounds-2", "startup-supreme-1", "startup-supreme-2", "startup-supreme-3", "vc-puzzle-1", "vc-puzzle-2"];
 
   function shuffle(a) {
-    for (let i = a.length - 1; i > 0; i--) {
+    for (let i = a.length - 1; i >= 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [a[i], a[j]] = [a[j], a[i]];
     }
