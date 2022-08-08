@@ -83,6 +83,11 @@ window.onscroll = function (e) {
     };
 
   }
+	document.querySelectorAll('.layout-' + number + ' .desktop .project').forEach(item => item.addEventListener ('mouseenter', function () {
+					console.log(event.target.getAttribute('href'))
+			}
+	))
+
 
 	for (let i = 0; i < document.querySelectorAll('.inspired').length; i++) {
 		document.querySelectorAll('.inspired .project-hover .caption')[i].innerHTML = "2022";
