@@ -37,7 +37,7 @@ window.onscroll = function (e) {
 } 
 
   const projects1 = ["inspired-1", "inspired-2", "inspired-3", "inspired-4", "party-round-1", "party-round-2", "party-round-3", "wombo-dream-1", "wombo-dream-2", "wombo-dream-3"];
-  const projects2 = ["prologue-1", "prologue-2", "prologue-3", "prologue-4", "hyper-1", "hyper-2", "hyper-3", "party-grounds-1", "party-grounds-2", "notes-1", "notes-2"];
+  const projects2 = ["prologue-1", "prologue-2", "prologue-3", "prologue-4", "hyper-1", "hyper-2", "hyper-3", "party-grounds-1", "party-grounds-2", "notes-about-people-1", "notes-about-people-2"];
   const projects3 = ["startup-supreme-1", "startup-supreme-2", "startup-supreme-3", "vc-puzzle-1", "vc-puzzle-2", "workweek-1", "workweek-2", "workweek-3", "workweek-4"];
 
   function shuffle(a) {
@@ -65,7 +65,7 @@ window.onscroll = function (e) {
 	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[3].classList.add('prologue', 'prologue-' + getRandomInt(1, 4))
 	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[4].classList.add('hyper', 'hyper-' + getRandomInt(1, 3))
 	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[5].classList.add('party-grounds', 'party-grounds-' + getRandomInt(1, 2))
-	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[6].classList.add('notes', 'notes-' + getRandomInt(1, 2))
+	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[6].classList.add('notes-about-people', 'notes-about-people-' + getRandomInt(1, 2))
 	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[7].classList.add('startup-supreme', 'startup-supreme-' + getRandomInt(1, 3))
 	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[8].classList.add('vc-puzzle', 'vc-puzzle-' + getRandomInt(1, 2))
 	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[9].classList.add('workweek', 'workweek-' + getRandomInt(1, 4))
@@ -116,11 +116,11 @@ window.onscroll = function (e) {
 		document.querySelectorAll('.party-grounds .project-hover .project-hover-top .body-founders-small')[i].innerHTML = "Description for Party Grounds.";
 		document.querySelectorAll('.party-grounds .project-hover .project-hover-bottom .body-founders-small')[i].innerHTML = "Expertise<br>Expertise<br>Expertise";
 	}
-	for (let i = 0; i < document.querySelectorAll('.notes').length; i++) {
-		document.querySelectorAll('.notes .project-hover .caption')[i].innerHTML = "2020";
-		document.querySelectorAll('.notes .project-hover .label')[i].innerHTML = "Notes About People";
-		document.querySelectorAll('.notes .project-hover .project-hover-top .body-founders-small')[i].innerHTML = "For your mind and the people in your life.";
-		document.querySelectorAll('.notes .project-hover .project-hover-bottom .body-founders-small')[i].innerHTML = "Product Design<br>Visual Identity";
+	for (let i = 0; i < document.querySelectorAll('.notes-about-people').length; i++) {
+		document.querySelectorAll('.notes-about-people .project-hover .caption')[i].innerHTML = "2020";
+		document.querySelectorAll('.notes-about-people .project-hover .label')[i].innerHTML = "Notes About People";
+		document.querySelectorAll('.notes-about-people .project-hover .project-hover-top .body-founders-small')[i].innerHTML = "For your mind and the people in your life.";
+		document.querySelectorAll('.notes-about-people .project-hover .project-hover-bottom .body-founders-small')[i].innerHTML = "Product Design<br>Visual Identity";
 	}
 	for (let i = 0; i < document.querySelectorAll('.startup-supreme').length; i++) {
 		document.querySelectorAll('.startup-supreme .project-hover .caption')[i].innerHTML = "2021";
@@ -164,7 +164,7 @@ $('.project').on('mouseover',function(){for (let i = 0; i < document.querySelect
 $('.inspired').on('mouseover',function(){for (let i = 0; i < document.querySelectorAll('.inspired').length; i++) {document.querySelectorAll(".inspired")[i].style.opacity = "1"}})
 $('.prologue').on('mouseover',function(){for (let i = 0; i < document.querySelectorAll('.prologue').length; i++) {document.querySelectorAll(".prologue")[i].style.opacity = "1"}})
 $('.wombo-dream').on('mouseover',function(){for (let i = 0; i < document.querySelectorAll('.wombo-dream').length; i++) {document.querySelectorAll(".wombo-dream")[i].style.opacity = "1"}})
-$('.notes').on('mouseover',function(){for (let i = 0; i < document.querySelectorAll('.notes').length; i++) {document.querySelectorAll(".notes")[i].style.opacity = "1"}})
+$('.notes-about-people').on('mouseover',function(){for (let i = 0; i < document.querySelectorAll('.notes-about-people').length; i++) {document.querySelectorAll(".notes-about-people")[i].style.opacity = "1"}})
 $('.party-round').on('mouseover',function(){for (let i = 0; i < document.querySelectorAll('.party-round').length; i++) {document.querySelectorAll(".party-round")[i].style.opacity = "1"}})
 $('.party-grounds').on('mouseover',function(){for (let i = 0; i < document.querySelectorAll('.party-grounds').length; i++) {document.querySelectorAll(".party-grounds")[i].style.opacity = "1"}})
 //$('.galaxy').on('mouseover',function(){for (let i = 0; i < document.querySelectorAll('.galaxy').length; i++) {document.querySelectorAll(".galaxy")[i].style.opacity = "1"}})
