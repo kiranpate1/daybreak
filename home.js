@@ -78,17 +78,21 @@ window.onscroll = function (e) {
     //document.querySelectorAll('.layout-' + number + ' .project')[i].appendChild(div);
 		
     document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.add(combinedshuffle[i].slice(0, -2), combinedshuffle[i]);
+		document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].onclick = function () {
+        location.href = "'/" + combinedshuffle[i].slice(0, -2) + "'";
+    };
+
   }
-	$(".inspired").attr("href", "/inspired")
-	$(".party-round").attr("href", "/party-round")
-	$(".prologue").attr("href", "/prologue")
-	$(".wombo-dream").attr("href", "/wombo-dream")
-	$(".workweek").attr("href", "/workweek")
-	$(".hyper").attr("href", "/hyper")
-	$(".notes-about-people").attr("href", "/notes-about-people")
-	$(".party-grounds").attr("href", "/party-grounds")
-	$(".startup-supreme").attr("href", "/startup-supreme")
-	$(".vc-puzzle").attr("href", "/vc-puzzle")
+// 	$(".inspired").attr("href", "/inspired")
+// 	$(".party-round").attr("href", "/party-round")
+// 	$(".prologue").attr("href", "/prologue")
+// 	$(".wombo-dream").attr("href", "/wombo-dream")
+// 	$(".workweek").attr("href", "/workweek")
+// 	$(".hyper").attr("href", "/hyper")
+// 	$(".notes-about-people").attr("href", "/notes-about-people")
+// 	$(".party-grounds").attr("href", "/party-grounds")
+// 	$(".startup-supreme").attr("href", "/startup-supreme")
+// 	$(".vc-puzzle").attr("href", "/vc-puzzle")
 
 	for (let i = 0; i < document.querySelectorAll('.inspired').length; i++) {
 		document.querySelectorAll('.inspired .project-hover .caption')[i].innerHTML = "2022";
