@@ -51,7 +51,7 @@ if ($(window).width() > 992) {
       for (let i = 0; i < document.querySelectorAll('.project-info-wrapper > div').length; i++) {
         document.querySelectorAll('.project-info-wrapper > div').forEach((element, i) => {
           setTimeout(function () {
-            element.style.visibility = "visible" ?? "";
+            element.style.opacity = "1" ?? "";
           }, i * elementDelay);
         });
       }
