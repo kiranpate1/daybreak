@@ -1,7 +1,7 @@
 var elementDelay = 100;
 
 if ($(window).width() > 992) {
-		for (let i = 0; i < document.querySelectorAll('.case-top-bar-content > div').length; i++) {
+    for (let i = 0; i < document.querySelectorAll('.case-top-bar-content > div').length; i++) {
       document.querySelectorAll('.case-top-bar-content > div').forEach((element, i) => {
         setTimeout(function () {
           element.style.opacity = "1" ?? "";
@@ -40,14 +40,14 @@ if ($(window).width() > 992) {
     }, (document.querySelectorAll('.heading-1 span').length + document.querySelectorAll('.project-info-wrapper .project-info > div').length + document.querySelectorAll('.project-image-intro > div').length) * elementDelay);
 
 } else if ($(window).width() < 992) {
-		for (let i = 0; i < document.querySelectorAll('.case-top-bar-content > div').length; i++) {
+    for (let i = 0; i < document.querySelectorAll('.case-top-bar-content > div').length; i++) {
       document.querySelectorAll('.case-top-bar-content > div').forEach((element, i) => {
         setTimeout(function () {
           element.style.opacity = "1" ?? "";
         }, i * elementDelay);
       });
     }
-		setTimeout(function () {
+    setTimeout(function () {
       for (let i = 0; i < document.querySelectorAll('.project-info-wrapper > div').length; i++) {
         document.querySelectorAll('.project-info-wrapper > div').forEach((element, i) => {
           setTimeout(function () {
