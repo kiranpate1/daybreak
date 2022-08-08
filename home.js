@@ -79,9 +79,12 @@ window.onscroll = function (e) {
 		
     document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.add(combinedshuffle[i].slice(0, -2), combinedshuffle[i]);
 		document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].setAttribute("id", i);
-// 		document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].onclick = function () {
-//         location.href = combinedshuffle[i].slice(0, -2);
-//     };
+		document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].onclick = function () {
+			setTimeout(() => {
+				location.href = combinedshuffle[i].slice(0, -2);
+			}, "1800")
+        
+    };	
 
   }
 
@@ -234,7 +237,6 @@ var intervalId = window.setInterval(function(){
 	torontotime()
   SFtime()
 }, 1000);
-
 
 
 
