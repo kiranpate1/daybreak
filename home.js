@@ -85,7 +85,7 @@ window.onscroll = function (e) {
 
   }
 	document.querySelectorAll('.layout-' + number + ' .desktop .project').forEach(item => item.addEventListener ('click', function () {
-					console.log(event.target.getAttribute('thumbnailno'))
+					console.log(event.target.getAttribute("thumbnailno"))
 			}
 	))
 
