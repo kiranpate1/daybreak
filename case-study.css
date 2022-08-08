@@ -40,12 +40,12 @@
 .fml {
 	opacity: 1;
 }
-.project-image-intro > div {
+.project-image-intro > div, .main-wrapper .main-container:nth-child(2) {
 	visibility: hidden;
 }
 
 @media screen and (min-width: 992px) {
-	.project-info-wrapper .project-info > div, .main-wrapper .main-container:nth-child(2) {
+	.project-info-wrapper .project-info > div {
 		visibility: hidden;
 	}
 }
