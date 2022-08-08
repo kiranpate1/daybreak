@@ -36,9 +36,9 @@ window.onscroll = function (e) {
   }
 } 
 
-  const projects1 = ["inspired-1", "inspired-2", "inspired-3", "inspired-4", "party-round-1", "party-round-2", "party-round-3", "wombo-dream-1", "wombo-dream-2", "wombo-dream-3"];
-  const projects2 = ["prologue-1", "prologue-2", "prologue-3", "prologue-4", "hyper-1", "hyper-2", "hyper-3", "party-grounds-1", "party-grounds-2", "notes-about-people-1", "notes-about-people-2"];
-  const projects3 = ["startup-supreme-1", "startup-supreme-2", "startup-supreme-3", "vc-puzzle-1", "vc-puzzle-2", "workweek-1", "workweek-2", "workweek-3", "workweek-4"];
+  const projects1 = ["inspired-1", "inspired-2", "inspired-3", "inspired-4", "party-round-1", "party-round-2", "party-round-3", "prologue-1", "prologue-2", "prologue-3", "prologue-4"];
+  const projects2 = ["wombo-dream-1", "wombo-dream-2", "wombo-dream-3", "workweek-1", "workweek-2", "workweek-3", "workweek-4", "hyper-1", "hyper-2", "hyper-3"];
+  const projects3 = ["notes-about-people-1", "notes-about-people-2", "party-grounds-1", "party-grounds-2", "startup-supreme-1", "startup-supreme-2", "startup-supreme-3", "vc-puzzle-1", "vc-puzzle-2"];
 
   function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
@@ -61,14 +61,14 @@ window.onscroll = function (e) {
 	}
 	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[0].classList.add('inspired', 'inspired-' + getRandomInt(1, 4))
 	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[1].classList.add('party-round', 'party-round-' + getRandomInt(1, 3))
-	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[2].classList.add('wombo-dream', 'wombo-dream-' + getRandomInt(1, 3))
 	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[3].classList.add('prologue', 'prologue-' + getRandomInt(1, 4))
+	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[2].classList.add('wombo-dream', 'wombo-dream-' + getRandomInt(1, 3))
+	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[9].classList.add('workweek', 'workweek-' + getRandomInt(1, 4))
 	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[4].classList.add('hyper', 'hyper-' + getRandomInt(1, 3))
-	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[5].classList.add('party-grounds', 'party-grounds-' + getRandomInt(1, 2))
 	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[6].classList.add('notes-about-people', 'notes-about-people-' + getRandomInt(1, 2))
+	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[5].classList.add('party-grounds', 'party-grounds-' + getRandomInt(1, 2))
 	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[7].classList.add('startup-supreme', 'startup-supreme-' + getRandomInt(1, 3))
 	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[8].classList.add('vc-puzzle', 'vc-puzzle-' + getRandomInt(1, 2))
-	document.querySelectorAll('.layout-' + number + ' .mobile .project-mobile')[9].classList.add('workweek', 'workweek-' + getRandomInt(1, 4))
 
 
 
