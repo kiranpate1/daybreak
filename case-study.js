@@ -1,6 +1,6 @@
 var elementDelay = 100;
 
-if ($(window).width() => 992) {
+if ($(window).width() > 992) {
 		for (let i = 0; i < document.querySelectorAll('.case-top-bar-content > div').length; i++) {
       document.querySelectorAll('.case-top-bar-content > div').forEach((element, i) => {
         setTimeout(function () {
