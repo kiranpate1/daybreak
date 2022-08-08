@@ -78,13 +78,13 @@ window.onscroll = function (e) {
     //document.querySelectorAll('.layout-' + number + ' .project')[i].appendChild(div);
 		
     document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].classList.add(combinedshuffle[i].slice(0, -2), combinedshuffle[i]);
-		document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].onclick = function () {
-        location.href = combinedshuffle[i].slice(0, -2);
-    };
+// 		document.querySelectorAll('.layout-' + number + ' .desktop .project')[i].onclick = function () {
+//         location.href = combinedshuffle[i].slice(0, -2);
+//     };
 
   }
-	document.querySelectorAll('.layout-' + number + ' .desktop .project').forEach(item => item.addEventListener ('hover', function () {
-					console.log(event.target.classList)
+	document.querySelectorAll('.layout-' + number + ' .desktop .project').forEach(item => item.addEventListener ('click', function () {
+					console.log(event.target.getAttribute('id'))
 			}
 	))
 
