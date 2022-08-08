@@ -83,7 +83,6 @@ window.onscroll = function (e) {
 			setTimeout(() => {
 				location.href = combinedshuffle[i].slice(0, -2);
 			}, "1800")
-        
     };	
 
   }
