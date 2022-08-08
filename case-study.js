@@ -65,6 +65,18 @@ if ($(window).width() > 992) {
         });
       }
     }, (document.querySelectorAll('.project-info-wrapper > div').length + document.querySelectorAll('.case-top-bar-content > div').length) * elementDelay);
+    setTimeout(function () {
+      for (let i = 0; i < document.querySelectorAll('.intro-desc-2 span').length; i++) {
+        document.querySelectorAll('.intro-desc-2 span').forEach((element, i) => {
+          setTimeout(function () {
+            element.style.display = "inline-block" ?? "";
+          }, i * elementDelay);
+        });
+      }
+    }, (document.querySelectorAll('.case-top-bar-content > div').length + document.querySelectorAll('.project-info-wrapper > div').length + document.querySelectorAll('.project-image-intro > div').length) * elementDelay);
+    setTimeout(function () {
+      document.getElementsByClassName('main-container')[2].style.visibility = "visible";
+    }, (document.querySelectorAll('.case-top-bar-content > div').length + document.querySelectorAll('.project-info-wrapper > div').length + document.querySelectorAll('.project-image-intro > div').length + document.querySelectorAll('.intro-desc-2 span').length) * elementDelay);
 };
 		
 window.onscroll = function() {myFunction()};
